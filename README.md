@@ -3,7 +3,7 @@
 O software ProjetoZero tem como objetivo conectar multiplataformas, via API e integrações ERPs.
 
 
-### Markdown
+### 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -26,8 +26,6 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-imagem ![image](C:\Users\JHOW\source\repos\ProMail\ProjetoZero\ProjetoZero\teste\Icones\rapariga.jpg).
 
 ### Jekyll Themes
 
