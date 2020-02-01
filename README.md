@@ -9,7 +9,7 @@ Em primeiro momento o sistema solicitará que o usuário faça o login para aute
 
 
 
-![image1](C:\Users\JHOW\source\repos\ProMail\ProjetoZero\ProjetoZero\teste\Icones\Pagina_inicial.jpg)
+![Image](C:\Users\JHOW\source\repos\ProMail\ProjetoZero\ProjetoZero\teste\Icones\Pagina_inicial.jpg)
 
 
 
