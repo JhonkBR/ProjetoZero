@@ -1,6 +1,6 @@
 ## Bem vindo ao ProjetoZero
 
-O software ProjetoZero tem como intuito conectar multiplataformas, via API e integrações ERPs.
+O software ProjetoZero tem como intuit conectar multiplataformas, via API e integrações ERPs.
 
 
 ### Markdown
