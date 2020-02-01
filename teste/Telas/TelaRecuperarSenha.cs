@@ -97,6 +97,7 @@ namespace teste.Telas
         {
             this.Dispose();
             Form1 telaLogin = new Form1();
+            //conso
             telaLogin.Show();
         }
 
