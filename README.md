@@ -7,6 +7,11 @@ O software ProjetoZero tem como objetivo conectar multiplataformas, via API e in
 
 Em primeiro momento o sistema solicitará que o usuário faça o login para autenticar o seu registro e as funções disponíveis de acordo com o nível hierárquico.
 
+
+
+![image](C:\Users\JHOW\source\repos\ProMail\ProjetoZero\ProjetoZero\teste\Icones\Pagina_Inicial.png)
+
+
 ```markdown
 Syntax highlighted code block
 
