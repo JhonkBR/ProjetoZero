@@ -84,8 +84,13 @@ namespace teste.Telas
                 }
             }
 
+            else
+            {
+                MessageBox.Show("E-mail inválido ou não cadastrado, favor verifique!");
 
+            }
         }
+
            
 
         private void buttonCancelar_Click(object sender, EventArgs e)
