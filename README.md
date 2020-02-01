@@ -1,6 +1,6 @@
 ## Bem vindo ao ProjetoZero
 
-O software ProjetoZero tem como objetivo conectar multiplataformas, via API e integrações ERPs.
+O software tem como objetivo conectar multiplataformas, via API e integrações ERPs.
 
 
 
@@ -20,15 +20,13 @@ O projeto está em fase de desenvolvimento, cujo prazo para entrega até 2021.
 
 ## Estapas 
 
-### 1. Desenvolvimento.
+1. Desenvolvimento.
 
-### 2. Temporada de testes.
+2. Temporada de testes.
 
-### 3. Finalização;
+3. Finalização;
 
 
 
 ### Dúvida sugestões 
-Entre em contato no linkedin: [documentation](https://www.linkedin.com/in/jhoocandido/).
-
-
+Entre em contato no linkedin: [Jhonata Cândido](https://www.linkedin.com/in/jhoocandido/).
