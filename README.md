@@ -9,7 +9,7 @@ Em primeiro momento o sistema solicitará que o usuário faça o login para aute
 
 
 
-![Image](https://github.com/JhonkBR/ProjetoZero/blob/master/teste/Icones/LoginImg.png)
+![Image](https://raw.githubusercontent.com/JhonkBR/ProjetoZero/master/teste/Icones/LoginImg.png)
 
 
 
