@@ -27,7 +27,7 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-imagem ![image](https://scontent.fcgh9-1.fna.fbcdn.net/v/t1.0-9/62385284_2530281883656662_2391078537873326080_n.jpg?_nc_cat=110&_nc_oc=AQkmUPO-pGA5tEPKBhbZb2a6l6PG_YSTTe5xWPUo1y-UBL2QFCpGPeVbXPOvmR5bwaU&_nc_ht=scontent.fcgh9-1.fna&oh=fe27bc8da6afb5c8b24fd3dc00fbf98c&oe=5ED153B9).
+imagem ![image](C:\Users\JHOW\source\repos\ProMail\ProjetoZero\ProjetoZero\teste\Icones\rapariga.jpg).
 
 ### Jekyll Themes
 
