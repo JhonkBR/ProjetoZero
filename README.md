@@ -3,9 +3,9 @@
 O software ProjetoZero tem como objetivo conectar multiplataformas, via API e integrações ERPs.
 
 
-### 
+### Sobre: 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Em primeiro momento o sistema solicitará que o usuário faça o login para autenticar o seu registro e as funções disponíveis de acordo com o nível hierárquico.
 
 ```markdown
 Syntax highlighted code block
