@@ -2,15 +2,12 @@
 
 O software ProjetoZero tem como objetivo conectar multiplataformas, via API e integrações ERPs.
 
-![Image de Login](https://github.com/JhonkBR/ProjetoZero/blob/master/teste/Icones/LoginImg.png)
-
-![Imagem do Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ### Sobre: 
 
 Em primeiro momento o sistema solicitará que o usuário faça o login para autenticar o seu registro e as funções disponíveis de acordo com o nível hierárquico.
 
-
+![Image de Login](https://github.com/JhonkBR/ProjetoZero/blob/master/teste/Icones/LoginImg.png)
 
 
 
