@@ -37,6 +37,7 @@ namespace teste.Telas
             if (vl.ValidaEmailValido(TextLoginRecuperar.Text) == true)
             {
                 RetornaBanco ps = new RetornaBanco();
+                //
 
                 if (ps.Possuiemail(TextLoginRecuperar.Text) == true)
                 {
@@ -90,8 +91,6 @@ namespace teste.Telas
 
             }
         }
-
-           
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
