@@ -2,9 +2,9 @@
 
 O software ProjetoZero tem como objetivo conectar multiplataformas, via API e integrações ERPs.
 
-! [Image de Login] (C:\Users\JHOW\source\repos\ProMail\ProjetoZero\ProjetoZero\teste\Icones\rapariga.jpg)
+![Image de Login](C:\Users\JHOW\source\repos\ProMail\ProjetoZero\ProjetoZero\teste\Icones\rapariga.jpg)
 
-! [Imagem do Yaktocat] (https://octodex.github.com/images/yaktocat.png)
+![Imagem do Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ### Sobre: 
 
