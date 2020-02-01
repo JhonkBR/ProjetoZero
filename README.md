@@ -3,6 +3,8 @@
 O software ProjetoZero tem como objetivo conectar multiplataformas, via API e integrações ERPs.
 
 
+
+
 ### Sobre: 
 
 Em primeiro momento o sistema solicitará que o usuário faça o login para autenticar o seu registro e as funções disponíveis de acordo com o nível hierárquico.
@@ -11,30 +13,22 @@ Em primeiro momento o sistema solicitará que o usuário faça o login para aute
 
 
 
-```markdown
-Syntax highlighted code block
+## Bem vindo ao ProjetoZero
+O projeto está em fase de desenvolvimento, cujo prazo para entrega até 2021.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Estapas 
 
-**Bold** and _Italic_ and `Code` text
+### 1. Desenvolvimento.
 
-[Link](url) and ![Image](src)
-```
+### 2. Temporada de testes.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 3. Finalização;
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JhonkBR/ProjetoZero/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Dúvida sugestões 
+Entre em contato no linkedin: [documentation](https://www.linkedin.com/in/jhoocandido/).
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
