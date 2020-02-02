@@ -22,7 +22,7 @@ O projeto está em fase de desenvolvimento, cujo prazo para entrega até 2021.
 
 1. Desenvolvimento. :trollface:
 
-2. Temporada de testes.
+2. Temporada de tests.
 
 3. Finalização.
 
