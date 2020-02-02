@@ -55,9 +55,9 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(-4, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(163, 492);
+            this.panel1.Size = new System.Drawing.Size(168, 503);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox5
@@ -117,7 +117,7 @@
             // btnMinimizar
             // 
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(721, 12);
+            this.btnMinimizar.Location = new System.Drawing.Point(887, 10);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(24, 18);
             this.btnMinimizar.TabIndex = 10;
@@ -127,7 +127,7 @@
             // btnEncerrar
             // 
             this.btnEncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEncerrar.Image")));
-            this.btnEncerrar.Location = new System.Drawing.Point(751, 12);
+            this.btnEncerrar.Location = new System.Drawing.Point(917, 10);
             this.btnEncerrar.Name = "btnEncerrar";
             this.btnEncerrar.Size = new System.Drawing.Size(20, 20);
             this.btnEncerrar.TabIndex = 9;
@@ -138,16 +138,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(783, 493);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(949, 500);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnEncerrar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(783, 493);
             this.MinimumSize = new System.Drawing.Size(783, 493);
             this.Name = "TelaCentral";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Painel";
             this.Load += new System.EventHandler(this.Painel_Load);
