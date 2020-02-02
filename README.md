@@ -13,7 +13,7 @@ Em primeiro momento o sistema solicitará que o usuário faça o login para aute
 
 
 
-## Bem vindo ao ProjetoZero
+## Status atual
 O projeto está em fase de desenvolvimento, cujo prazo para entrega até 2021.
 
 
