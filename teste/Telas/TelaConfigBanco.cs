@@ -18,7 +18,7 @@ namespace teste.Telas
         {
             InitializeComponent();
         }
-            // Força o recarregamento de uma seção alterada.
+        // Força o recarregamento de uma seção alterada.
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -50,7 +50,7 @@ namespace teste.Telas
                 MessageBox.Show("erro ao salvar");
             }
         }
-        
+
 
         private void TelaConfigBanco_Load(object sender, EventArgs e)
         {
@@ -70,11 +70,12 @@ namespace teste.Telas
             ConexaoBanco con = new ConexaoBanco();
             try
             {
-                con.Conectar(); 
+                con.Conectar();
                 MessageBox.Show("Logado com êxito");
                 con.Desconectar();
             }
-            catch (SqlException) {
+            catch (SqlException)
+            {
                 MessageBox.Show("Erro ao conectar no banco de dados, favor verificar suas credenciais");
             }
         }

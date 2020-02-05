@@ -109,7 +109,7 @@
     <Compile Include="Controle\GeraPin.cs" />
     <Compile Include="Controle\Email.cs" />
     <Compile Include="DAO\ConexaoBanco.cs" />
-    <Compile Include="DAO\ManipulaBanco.cs" />
+    <Compile Include="DAO\ManipulaBanco_Login.cs" />
     <Compile Include="DAO\RetornaBanco.cs" />
     <Compile Include="DAO\SalvarCredenciaisServi.cs" />
     <Compile Include="Json\Pessoa.cs" />
@@ -144,6 +144,12 @@
     </Compile>
     <Compile Include="Telas\TelaCentral.Designer.cs">
       <DependentUpon>TelaCentral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TelaMudarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\TelaMudarSenha.Designer.cs">
+      <DependentUpon>TelaMudarSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaRecuperarSenha.cs">
       <SubType>Form</SubType>
@@ -181,6 +187,9 @@
     </Compile>
     <EmbeddedResource Include="Telas\TelaCentral.resx">
       <DependentUpon>TelaCentral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\TelaMudarSenha.resx">
+      <DependentUpon>TelaMudarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaRecuperarSenha.resx">
       <DependentUpon>TelaRecuperarSenha.cs</DependentUpon>

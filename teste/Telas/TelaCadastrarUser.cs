@@ -32,23 +32,31 @@ namespace teste.Telas
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
-            if (textCadSenha.Text != textCadSenha1.Text){MessageBox.Show("SENHA NÃO COINCIDEM!");
-                
+            if (textCadSenha.Text != textCadSenha1.Text)
+            {
+                MessageBox.Show("SENHA NÃO COINCIDEM!");
+
             }
-            else if (textCadSenha.Text.Length < 4){MessageBox.Show("A SENHA DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
-                
+            else if (textCadSenha.Text.Length < 4)
+            {
+                MessageBox.Show("A SENHA DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
+
             }
-            else if (textCadSenha.Text == "") { MessageBox.Show("SENHA EM BRANCO!");
-                
+            else if (textCadSenha.Text == "")
+            {
+                MessageBox.Show("SENHA EM BRANCO!");
+
             }
-            else if (textCadLogin.Text.Length < 4) { MessageBox.Show("O USUÁRIO DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
-                
+            else if (textCadLogin.Text.Length < 4)
+            {
+                MessageBox.Show("O USUÁRIO DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
+
             }
-            
+
             else
             {
                 login login = new login();
-                login.CadastrarLogin(textCadLogin.Text, textCadSenha1.Text,textEmail.Text);
+                login.CadastrarLogin(textCadLogin.Text, textCadSenha1.Text, textEmail.Text);
                 MessageBox.Show(login.mensagem);
                 textCadSenha.Text = "";
                 textCadSenha1.Text = "";
@@ -74,14 +82,15 @@ namespace teste.Telas
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void buttonCancelar_Click( object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            Form1 a = new Form1() ;
+            Form1 a = new Form1();
             a.Visible = true;
-            this.Close();            
+            this.Close();
         }
 
-        private void lineShape2_Click(object sender, EventArgs e){
+        private void lineShape2_Click(object sender, EventArgs e)
+        {
 
 
         }
@@ -104,7 +113,8 @@ namespace teste.Telas
                     textEmail.Text = "";
                 }
             }
-            else {
+            else
+            {
                 textCadSenha1.Enabled = true;
                 textCadSenha.Enabled = true;
             }
@@ -122,8 +132,8 @@ namespace teste.Telas
 
         private void textCadLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
-     
-            
+
+
         }
     }
 }

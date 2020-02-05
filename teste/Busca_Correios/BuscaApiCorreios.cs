@@ -34,6 +34,6 @@ namespace teste.Busca_Correios
         [JsonProperty("gia")]
         public string Gia { get; set; }
 
- 
+
     }
 }

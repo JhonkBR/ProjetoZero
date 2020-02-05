@@ -11,11 +11,13 @@ namespace teste.DAO
     {
         public bool tem;
         login log = new login();
-        public bool Possui(string usuario,string senha) {
-            
-            tem = log.RetornaLogin(usuario,senha);
+        public bool Possui(string usuario, string senha)
+        {
+
+            tem = log.RetornaLogin(usuario, senha);
             // ! = nega a informação
-            if (!log.mensagemRetorna == true) {
+            if (!log.mensagemRetorna == true)
+            {
                 /*
                 CASO O RETORNO FOR DIFERENTE DE TRUE, ELE RETORNA COMO FALSO PARA QUE APRESENTE COMO USUÁRIO INCORRETO
                 */
@@ -38,9 +40,10 @@ namespace teste.DAO
             }
             return tem;//RRETORNO O VALOR, SE TIVER TEM = TRUE, CASO CONTRÁRIO = FALSE
         }
-        public bool Possuiemail(string email) {
-            
-            if (log.RetornaEmailValido(email)== true)
+        public bool Possuiemail(string email)
+        {
+
+            if (log.RetornaEmailValido(email) == true)
             {
                 this.tem = log.mensagemRetorna;
 

@@ -10,7 +10,7 @@ namespace teste.DAO
     public class login
     {
 
-        SqlCommand cmd = new SqlCommand();//INSTANCIEI PARA USAR O SQL COMMAND
+        //INSTANCIEI PARA USAR O SQL COMMAND
         ConexaoBanco con = new ConexaoBanco();
         public string mensagem; // A POHA DA MENSAGEM DE ERRO
         public bool mensagemRetorna = false; //RECEBE A MENSAGEM COMO TRUE OU FALSE, TRUE = POSSUI USUÁRIO
@@ -20,6 +20,7 @@ namespace teste.DAO
         //MÉTODO DE CADASTRAR LOGIN
         public string CadastrarLogin(string usuario, string senha, String email)
         {
+            SqlCommand cmd = new SqlCommand();
             // Comando sql -- Insert -- Sqlcommand
             cmd.CommandText = "INSERT INTO LOGIN (USUARIO,SENHA,email) VALUES (@USUARIO,@SENHA,@EMAIL)";
 
@@ -33,14 +34,16 @@ namespace teste.DAO
             {
                 cmd.Connection = con.Conectar(); //executar
                 cmd.ExecuteNonQuery();
-                con.Desconectar();
                 this.mensagem = "Cadastrado com sucesso!!!!";
             }
             catch (SqlException e)
             {
                 this.mensagem = "Erro ao conectar com o banco de dados, DEU MERDA" + e;
             }
-
+            finally
+            {
+                con.Desconectar();
+            }
             // Sair
             //Mostrar mensagem de erro ou 
 
@@ -48,9 +51,10 @@ namespace teste.DAO
             return mensagem;
         }
 
-        //MÉTODO DE PESQUISAR O LOGIN
+        //MÉTODO PARA VERIFICAR SE O USUÁRIO EXISTE 2.0 - IREI ANALISAR RSRS
         public bool RetornaLogin(string usuario, string senha)
         {
+            SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT USUARIO,SENHA FROM LOGIN  WHERE USUARIO = @USUARIO AND SENHA = @SENHA";
             cmd.Parameters.AddWithValue("@USUARIO", usuario);
             cmd.Parameters.AddWithValue("@SENHA", senha);
@@ -62,7 +66,7 @@ namespace teste.DAO
                 if (dr.HasRows/* CASO O RESULTADO RETORNE LINHAS AFETADAS, SETA O VALOR PARA TRUE */)
                 {
                     mensagemRetorna = true;
-                    con.Desconectar();// DESCONECTA DO BANCO
+
                 }
             }
             catch (SqlException)
@@ -78,8 +82,11 @@ namespace teste.DAO
             return mensagemRetorna;
 
         }
+        
+        /*MÉTODO PARA VERIFICAR A EXISTÊNCIA DO USUÁRIO*/
         public bool RetornaLoginUser(string usuario)
         {
+            SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT USUARIO FROM LOGIN  WHERE USUARIO = @USUARIO";
             cmd.Parameters.AddWithValue("@USUARIO", usuario);
             try
@@ -90,20 +97,24 @@ namespace teste.DAO
                 if (dr.HasRows/* CASO O RESULTADO RETORNE LINHAS AFETADAS, SETA O VALOR PARA TRUE */)
                 {
                     mensagemRetorna = true;
-                    con.Desconectar();// DESCONECTA DO BANCO
                 }
             }
             catch (SqlException)
             {
                 this.mensagem = "ERRO AO ACESSAR BANCO DE DADOS, FAVOR VERIFIQUE SUA CONEXÃO...";
-
+            }
+            finally
+            {
+                con.Desconectar();
             }
 
             return mensagemRetorna;
         }
 
+        /*MÉTODO PARA VERIFICAR SE O E-MAIL EXISTE*/
         public bool RetornaEmailValido(string email)
         {
+            SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT email FROM LOGIN  WHERE email = @email";
             cmd.Parameters.AddWithValue("@email", email);
             try
@@ -114,7 +125,6 @@ namespace teste.DAO
                 if (dr.HasRows/* CASO O RESULTADO RETORNE LINHAS AFETADAS, SETA O VALOR PARA TRUE */)
                 {
                     mensagemRetorna = true;
-                    con.Desconectar();// DESCONECTA DO BANCO
                 }
             }
             catch (SqlException)
@@ -122,12 +132,18 @@ namespace teste.DAO
                 this.mensagem = "ERRO AO ACESSAR BANCO DE DADOS, FAVOR VERIFIQUE SUA CONEXÃO...";
 
             }
+            finally
+            {
+                con.Desconectar();
+            }
 
             return mensagemRetorna;
         }
 
+        /*MÉTODO PARA CADASTRAR O NOVO PIN PARA RECUPERAR A SENHA*/
         public bool CadastraPinSenha(string email, int pin)
         {
+            SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UPDATE LOGIN SET PIN =@PIN WHERE EMAIL =@EMAIL";
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@pin", pin);
@@ -138,7 +154,6 @@ namespace teste.DAO
                 if (dr.HasRows)
                 {
                     mensagemRetorna = true;
-                    con.Desconectar();
                 }
 
             }
@@ -148,13 +163,20 @@ namespace teste.DAO
                 this.mensagem = "ERRO AO SALVAR O PIN NO BANCO DE DADOS";
 
             }
+            finally
+            {
+                con.Desconectar();
+            }
 
             return mensagemRetorna;
         }
-
+        
+        /*MÉTODO PARA VERIFICAR SE O PIN EXISTE NO BANCO*/
         public bool PesquisaPin(string email, int pin)
         {
-            cmd.CommandText = "SELECT PIN FROM LOGIN WHERE @email and @pin";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT PIN FROM LOGIN WHERE EMAIL = @email and PIN = @pin";
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@pin", pin);
             try
@@ -164,21 +186,53 @@ namespace teste.DAO
                 if (dr.HasRows)
                 {
                     mensagemRetorna = true;
-                    con.Desconectar();
                 }
 
             }
-            catch(SqlException) {
-                this.mensagem = "Erro ao encontrar o pin";
+            catch (SqlException e)
+            {
+                this.mensagem = "Erro ao encontrar o pin" + e;
+
+            }
+            finally
+            {
                 con.Desconectar();
-
-
             }
 
             return mensagemRetorna;
         }
 
 
+        /*MÉTODO PARA ALTERAR A SENHA NO BANCO DE DADOS*/
+        public bool AlteraSenha(string Email, string Senha, string Pin)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UDPDATE LOGIN SET SENHA = @SENHA WHERE EMAIL = @EMAIL and PIN = @PIN";
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@EMAIL", Email);
+            cmd.Parameters.AddWithValue("@SENHA", Senha);
+            cmd.Parameters.AddWithValue("@PIN", Pin);
+            try
+            {
+                cmd.Connection = con.Conectar();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    mensagemRetorna = true;
+                }
+            }
+            catch (SqlException e)
+            {
+                this.mensagem = "Erro ao conectar ao banco de dados: " + e;
+            }
+
+            finally
+            {
+                con.Desconectar();
+            }
+
+            return mensagemRetorna;
+        }
 
     }
 }

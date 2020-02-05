@@ -19,7 +19,8 @@ namespace teste.DAO
         MÉTODOS DE CONECTAR E DESCONECTAR
         ----------------------------
         */
-        public ConexaoBanco() {
+        public ConexaoBanco()
+        {
             //Construtor
             string serv = Properties.Settings.Default.Servidor;
             string banco = Properties.Settings.Default.Banco;
@@ -30,7 +31,8 @@ namespace teste.DAO
             //INFORMAÇÕES DO BANCO SERVIDOR E 
 
         }
-        public SqlConnection Conectar() {
+        public SqlConnection Conectar()
+        {
             // MÉTODO DE CONECTAR, COLOQUEI VAZIO PARA TRAZER O ERRO DO SQL
             if (con.State == System.Data.ConnectionState.Closed) /* Comando para chamar a conexão e conecar no banco de dados.*/
             {
@@ -39,13 +41,15 @@ namespace teste.DAO
             return con;
         }
 
-        public void Desconectar() {
+        public void Desconectar()
+        {
 
-            if (con.State == System.Data.ConnectionState.Open) {//Coloquei um IF caso a conexão estiver aberta
+            if (con.State == System.Data.ConnectionState.Open)
+            {//Coloquei um IF caso a conexão estiver aberta
                 //Fechar a conexão
                 con.Close();
 
             }
-        }    
+        }
     }
 }

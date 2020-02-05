@@ -15,15 +15,19 @@ namespace teste.Telas
 {
     public partial class TelaRecuperarSenha : Form
     {
+        login login = new login();
+        Email enviar = new Email();
         public TelaRecuperarSenha()
         {
             InitializeComponent();
         }
+        TelaMudarSenha TelaRecup = new TelaMudarSenha();
+        GeraPin gera = new GeraPin();
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
- 
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -33,6 +37,8 @@ namespace teste.Telas
 
         private void buttonRecuperarSenha_Click(object sender, EventArgs e)
         {
+            if (TextLoginRecuperar.Text == "j") 
+                TextLoginRecuperar.Text = "jhoocandido@gmail.com";
             Email vl = new Email();
             if (vl.ValidaEmailValido(TextLoginRecuperar.Text) == true)
             {
@@ -41,42 +47,40 @@ namespace teste.Telas
 
                 if (ps.Possuiemail(TextLoginRecuperar.Text) == true)
                 {
-
-                    GeraPin gera = new GeraPin();
-                    int guid = Convert.ToInt32(gera.RetornaGuid());
-                    login login = new login();
-                    login.CadastraPinSenha(TextLoginRecuperar.Text, guid);
-                    Email enviar = new Email();
                     if (textBoxPin.Visible == false)
                     {
 
+                        int guid = Convert.ToInt32(gera.RetornaGuid());
 
                         if (enviar.EnviaEmail(TextLoginRecuperar.Text, guid) == true)
                         {
-
-                            MessageBox.Show("Mensagem enviada com Êxito");
-                            label1.Visible = true;
-                            lineShape1.Visible = true;
-                            textBoxPin.Visible = true;
+                           
+                                login.CadastraPinSenha(TextLoginRecuperar.Text, guid);
+                                MessageBox.Show("Mensagem enviada com Êxito");
+                                label1.Visible = true;
+                                lineShape1.Visible = true;
+                                textBoxPin.Visible = true;
+                          
                         }
                         else
                         {
                             MessageBox.Show("Erro ao enviar mensagem.");
                         }
                     }
-                    if (textBoxPin.Text != "" && textBoxPin.Visible == false)
+                    if (textBoxPin.Text != "" && textBoxPin.Visible == true)
                     {
                         login lg = new login();
-                        if (login.PesquisaPin(TextLoginRecuperar.Text, guid) == true)
+                        if (login.PesquisaPin(TextLoginRecuperar.Text, Convert.ToInt32(textBoxPin.Text)) == true)
                         {
                             MessageBox.Show("Recuperando senha");
+                            TelaRecup.Show();
+
                         }
-                        else {
+                        else
+                        {
                             MessageBox.Show("Erro ao encontrar o PIN favor verifique!");
                         }
                     }
-
-
                 }
                 else
                 {
@@ -109,5 +113,5 @@ namespace teste.Telas
 
         }
     }
-    }
+}
 

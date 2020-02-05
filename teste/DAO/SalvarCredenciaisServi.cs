@@ -9,7 +9,8 @@ namespace teste.DAO
     public class SalvarCredenciaisServi
     {
         public string Conectar;
-        public String Servidor(string servid, String usuario, String senha, String banco) {
+        public String Servidor(string servid, String usuario, String senha, String banco)
+        {
             ConexaoBanco con = new ConexaoBanco();
             return Conectar;
         }
