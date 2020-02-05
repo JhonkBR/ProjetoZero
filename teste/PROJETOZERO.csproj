@@ -106,8 +106,10 @@
   <ItemGroup>
     <Compile Include="Busca_Correios\BuscaApiCorreios.cs" />
     <Compile Include="Busca_Correios\ICepAPIService.cs" />
+    <Compile Include="Controle\ForcaDaSenha.cs" />
     <Compile Include="Controle\GeraPin.cs" />
     <Compile Include="Controle\Email.cs" />
+    <Compile Include="Controle\ValidaSegurancaSenha.cs" />
     <Compile Include="DAO\ConexaoBanco.cs" />
     <Compile Include="DAO\ManipulaBanco_Login.cs" />
     <Compile Include="DAO\RetornaBanco.cs" />
@@ -231,7 +233,6 @@
     <Content Include="Icones\giphy.gif" />
     <Content Include="Icones\gradients-26042-26727-hd-wallpapers.jpg" />
     <Content Include="Icones\how.png" />
-    <Content Include="Icones\icons8-enviar-e-mail-em-massa-16.png" />
     <Content Include="Icones\Minimize_Icon.png" />
   </ItemGroup>
   <ItemGroup>

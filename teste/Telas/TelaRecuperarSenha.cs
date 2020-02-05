@@ -74,6 +74,7 @@ namespace teste.Telas
                         {
                             MessageBox.Show("Recuperando senha");
                             TelaRecup.Show();
+                            this.Dispose();
 
                         }
                         else

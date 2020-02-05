@@ -208,7 +208,6 @@ namespace teste.DAO
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UDPDATE LOGIN SET SENHA = @SENHA WHERE EMAIL = @EMAIL and PIN = @PIN";
-            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@EMAIL", Email);
             cmd.Parameters.AddWithValue("@SENHA", Senha);
             cmd.Parameters.AddWithValue("@PIN", Pin);
@@ -233,6 +232,8 @@ namespace teste.DAO
 
             return mensagemRetorna;
         }
+
+
 
     }
 }
