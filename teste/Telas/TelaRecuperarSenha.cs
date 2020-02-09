@@ -70,16 +70,25 @@ namespace teste.Telas
                     if (textBoxPin.Text != "" && textBoxPin.Visible == true)
                     {
                         login lg = new login();
-                        if (login.PesquisaPin(TextLoginRecuperar.Text, Convert.ToInt32(textBoxPin.Text)) == true)
+                        try
                         {
-                            MessageBox.Show("Recuperando senha");
-                            TelaRecup.Show();
-                            this.Dispose();
+                            if (login.PesquisaPin(TextLoginRecuperar.Text, Convert.ToInt32(textBoxPin.Text)) == true)
+                            {
+                                MessageBox.Show("Recuperando senha");
+                                TelaRecup.Show();
+                                this.Dispose();
 
+                            }
+
+
+                            else
+                            {
+                                MessageBox.Show("Erro ao encontrar o PIN favor verifique!");
+                            }
                         }
-                        else
+                        catch
                         {
-                            MessageBox.Show("Erro ao encontrar o PIN favor verifique!");
+                            MessageBox.Show("PIN inválido!");
                         }
                     }
                 }

@@ -175,7 +175,6 @@ namespace teste
             TelaRecuperarSenha tel = new TelaRecuperarSenha();
             tel.Show();
 
-            
         }
     }
         }

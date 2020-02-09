@@ -47,6 +47,8 @@ namespace teste.Telas
             ForcaDaSenha retorno = vl.GetForcaDaSenha(TextBoxNewSenha.Text);
             string retornoString = Convert.ToString(retorno);
             MessageBox.Show(retornoString);
+
+
         }
             }
         }
