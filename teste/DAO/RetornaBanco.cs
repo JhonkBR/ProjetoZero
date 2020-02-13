@@ -10,7 +10,7 @@ namespace teste.DAO
     public class RetornaBanco
     {
         public bool tem;
-        login log = new login();
+        ManipulaBanco log = new ManipulaBanco();
         public bool Possui(string usuario, string senha)
         {
 

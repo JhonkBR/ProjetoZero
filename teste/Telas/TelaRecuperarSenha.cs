@@ -15,7 +15,7 @@ namespace teste.Telas
 {
     public partial class TelaRecuperarSenha : Form
     {
-        login login = new login();
+        ManipulaBanco login = new ManipulaBanco();
         Email enviar = new Email();
         public TelaRecuperarSenha()
         {
@@ -37,6 +37,7 @@ namespace teste.Telas
 
         private void buttonRecuperarSenha_Click(object sender, EventArgs e)
         {
+
             if (TextLoginRecuperar.Text == "j") 
                 TextLoginRecuperar.Text = "jhoocandido@gmail.com";
             Email vl = new Email();
@@ -57,52 +58,61 @@ namespace teste.Telas
                            
                                 login.CadastraPinSenha(TextLoginRecuperar.Text, guid);
                                 MessageBox.Show("Mensagem enviada com Êxito");
+                                TextLoginRecuperar.Enabled = false;
                                 label1.Visible = true;
                                 lineShape1.Visible = true;
                                 textBoxPin.Visible = true;
-                          
+                            labelMensagemUsuario.Text = "Usuário encontrado!";
+                            labelMensagemUsuario.ForeColor = Color.Green;
+
                         }
                         else
                         {
                             MessageBox.Show("Erro ao enviar mensagem.");
                         }
                     }
-                    if (textBoxPin.Text != "" && textBoxPin.Visible == true)
+                    try
                     {
-                        login lg = new login();
-                        try
+                        if (textBoxPin.Text != "" && textBoxPin.Visible == true)
                         {
-                            if (login.PesquisaPin(TextLoginRecuperar.Text, Convert.ToInt32(textBoxPin.Text)) == true)
-                            {
-                                MessageBox.Show("Recuperando senha");
-                                TelaRecup.Show();
-                                this.Dispose();
+                            ManipulaBanco lg = new ManipulaBanco();
+                                if (login.PesquisaPin(TextLoginRecuperar.Text, Convert.ToInt32(textBoxPin.Text)) == true)
+                                {
+                                    TelaMudarSenha.Credencial = TextLoginRecuperar.Text;
+                                    MessageBox.Show("PIN enviado por E-mail!");
+                                    TelaRecup.Show();
+                                    this.Dispose();
 
-                            }
+                                }
 
 
-                            else
-                            {
-                                MessageBox.Show("Erro ao encontrar o PIN favor verifique!");
-                            }
+                                else
+                                {
+                                    labelMensagemPin.Text = ("PIN não encontrado!");
+                                    labelMensagemPin.ForeColor = Color.Red;
+                                    textBoxPin.Clear();
+                                }
+
                         }
-                        catch
-                        {
-                            MessageBox.Show("PIN inválido!");
-                        }
+                    }
+                    finally { 
+                        labelMensagemPin.Text = ("PIN inválido!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("E-mail inválido ou não cadastrado, favor verifique!");
+                   // MessageBox.Show("E-mail inválido ou não cadastrado, favor verifique!");
+                    labelMensagemUsuario.ForeColor = Color.Red;
+                    labelMensagemUsuario.Text = ("E-mail inválido ou não cadastrado, favor verifique!");
 
                 }
             }
 
             else
             {
-                MessageBox.Show("E-mail inválido ou não cadastrado, favor verifique!");
-
+                labelMensagemUsuario.ForeColor = Color.Red;
+                labelMensagemUsuario.Text = ("E-mail inválido ou não cadastrado, favor verifique!");
+                TextLoginRecuperar.Clear();
             }
         }
 
@@ -119,6 +129,11 @@ namespace teste.Telas
         }
 
         private void textBoxPin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void TextLoginRecuperar_TextChanged(object sender, EventArgs e)
         {
 
         }

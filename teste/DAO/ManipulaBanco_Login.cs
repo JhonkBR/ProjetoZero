@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace teste.DAO
 {
-    public class login
+    public class ManipulaBanco
     {
 
         //INSTANCIEI PARA USAR O SQL COMMAND
@@ -204,13 +204,13 @@ namespace teste.DAO
 
 
         /*MÉTODO PARA ALTERAR A SENHA NO BANCO DE DADOS*/
-        public bool AlteraSenha(string Email, string Senha, string Pin)
+        public bool AlteraSenha(string Senha, string email)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UDPDATE LOGIN SET SENHA = @SENHA WHERE EMAIL = @EMAIL and PIN = @PIN";
-            cmd.Parameters.AddWithValue("@EMAIL", Email);
+            cmd.CommandText = "UPDATE LOGIN SET SENHA = @SENHA WHERE email = @email";
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@SENHA", Senha);
-            cmd.Parameters.AddWithValue("@PIN", Pin);
+            cmd.Parameters.AddWithValue("@email", email);
             try
             {
                 cmd.Connection = con.Conectar();

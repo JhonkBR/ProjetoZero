@@ -55,7 +55,7 @@ namespace teste.Telas
 
             else
             {
-                login login = new login();
+                ManipulaBanco login = new ManipulaBanco();
                 login.CadastrarLogin(textCadLogin.Text, textCadSenha1.Text, textEmail.Text);
                 MessageBox.Show(login.mensagem);
                 textCadSenha.Text = "";

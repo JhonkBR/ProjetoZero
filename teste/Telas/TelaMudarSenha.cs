@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using teste.Controle;
+using teste.DAO;
 using static teste.Controle.ForcaSenha;
 
 namespace teste.Telas
 {
     public partial class TelaMudarSenha : Form
     {
+        public static string Credencial { get; set; }// Criado estático para pegar o usuário
         public TelaMudarSenha()
         {
             InitializeComponent();
         }
+        ManipulaBanco Banco = new ManipulaBanco();
 
         private void labelTexto_Click(object sender, EventArgs e)
         {
@@ -43,11 +46,47 @@ namespace teste.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ValidaSegurancaSenha vl = new ValidaSegurancaSenha();
-            ForcaDaSenha retorno = vl.GetForcaDaSenha(TextBoxNewSenha.Text);
-            string retornoString = Convert.ToString(retorno);
-            MessageBox.Show(retornoString);
+            if (TextBoxNewSenha.Text != null && TextBoxConfirmNewSenha != null)
+            {
 
+                if (TextBoxConfirmNewSenha.Text == TextBoxNewSenha.Text)
+                {
+                    ValidaSegurancaSenha vl = new ValidaSegurancaSenha();
+                    ForcaDaSenha retorno = vl.GetForcaDaSenha(TextBoxNewSenha.Text);
+                    string retornoString = Convert.ToString(retorno);
+                    if (retornoString == "Aceitavel" || retornoString == "Forte" || retornoString == "Segura")
+                    {
+                        ManipulaBanco Atualiza = new ManipulaBanco();
+                        try
+                        {
+                            Atualiza.AlteraSenha(TextBoxConfirmNewSenha.Text, Credencial);
+                            MessageBox.Show("Senha alterada com êxito!!");
+                            this.Dispose();
+                            Form1 login = new Form1();
+                            login.Show();
+                            
+                        }
+                        catch {
+                            MessageBox.Show("Erro ao alterar a senha, favor verifique sua conexão com o banco de dados.");
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Senha fraca!");
+                        TextBoxConfirmNewSenha.Clear();
+                        TextBoxNewSenha.Clear();
+                    }
+
+                }
+                else {
+                    MessageBox.Show("Senhas não batem");
+                    TextBoxConfirmNewSenha.Clear();
+                    TextBoxNewSenha.Clear();
+                }
+
+            }
+            else {
+                MessageBox.Show("Campo em branco!");
+            }
 
         }
             }

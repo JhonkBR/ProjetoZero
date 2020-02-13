@@ -19,7 +19,7 @@ namespace teste
         {
             InitializeComponent();
         }
-        login login1 = new login();
+        ManipulaBanco login1 = new ManipulaBanco();
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
