@@ -48,6 +48,7 @@ namespace teste.DAO
                 this.tem = log.mensagemRetorna;
 
             }
+           
 
             return tem;
         }

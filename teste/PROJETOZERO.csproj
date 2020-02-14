@@ -109,6 +109,7 @@
     <Compile Include="Controle\ForcaDaSenha.cs" />
     <Compile Include="Controle\GeraPin.cs" />
     <Compile Include="Controle\Email.cs" />
+    <Compile Include="Controle\ValidaNome.cs" />
     <Compile Include="Controle\ValidaSegurancaSenha.cs" />
     <Compile Include="DAO\ConexaoBanco.cs" />
     <Compile Include="DAO\ManipulaBanco_Login.cs" />

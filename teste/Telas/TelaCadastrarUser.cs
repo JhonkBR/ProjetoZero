@@ -8,8 +8,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using teste.Controle;
 using teste.DAO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static teste.Controle.ForcaSenha;
 
 namespace teste.Telas
 {
@@ -32,38 +34,63 @@ namespace teste.Telas
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
+            Email mail = new Email();
+            RetornaBanco ps = new RetornaBanco();
+            ValidaSegurancaSenha Senha = new ValidaSegurancaSenha();
+            ForcaDaSenha retorno = Senha.GetForcaDaSenha(textCadSenha.Text);
+
             if (textCadSenha.Text != textCadSenha1.Text)
             {
                 MessageBox.Show("SENHA NÃO COINCIDEM!");
 
             }
-            else if (textCadSenha.Text.Length < 4)
-            {
-                MessageBox.Show("A SENHA DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
-
-            }
-            else if (textCadSenha.Text == "")
-            {
-                MessageBox.Show("SENHA EM BRANCO!");
-
-            }
-            else if (textCadLogin.Text.Length < 4)
+            else if (textCadLogin.Text.Length < 5)
             {
                 MessageBox.Show("O USUÁRIO DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
 
             }
 
-            else
-            {
-                ManipulaBanco login = new ManipulaBanco();
-                login.CadastrarLogin(textCadLogin.Text, textCadSenha1.Text, textEmail.Text);
-                MessageBox.Show(login.mensagem);
-                textCadSenha.Text = "";
-                textCadSenha1.Text = "";
-                textCadLogin.Text = "";
-                textEmail.Text = "";
+            
+            else if (mail.ValidaEmailValido(textEmail.Text) == false ||ps.Possuiemail(textEmail.Text) == true)
+                { 
+                MessageBox.Show("E-mail inválido! ou já cadastrado");
+            }
+            else {
+                
+                string retornoString = Convert.ToString(retorno);
+                if (retornoString == "Aceitavel" || retornoString == "Forte" || retornoString == "Segura")
+                {
+
+                    ManipulaBanco login = new ManipulaBanco();
+                    login.CadastrarLogin(textCadLogin.Text, textCadSenha1.Text, textEmail.Text);
+                    MessageBox.Show(login.mensagem);
+                    textCadSenha.Text = "";
+                    textCadSenha1.Text = "";
+                    textCadLogin.Text = "";
+                    textEmail.Text = "";
+
+                }
+                else {
+                    MessageBox.Show("Senha fraca");
+                }
 
             }
+            //else if (textCadSenha.Text.Length < 4)
+            //{
+            //    MessageBox.Show("A SENHA DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
+
+                //}
+                //else if (textCadSenha.Text == "")
+                //{
+                //    MessageBox.Show("SENHA EM BRANCO!");
+
+                //}
+            
+
+            //else
+            //{
+
+            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -99,24 +126,35 @@ namespace teste.Telas
         {
             RetornaBanco pesq = new RetornaBanco();
             pesq.PossuiUser(textCadLogin.Text);
+            ValidaNome nome = new ValidaNome();
             //fiz um comando comum para para mostrar o acesso e finalizar
-            if (pesq.tem == true)
+            string novologin = textCadLogin.Text;
+            string[] novologin2 = novologin.Split(' ');
+
+
+            if (nome.RetornaNome(textCadLogin.Text) == true)
             {
-                textCadSenha1.Enabled = false;
-                textCadSenha.Enabled = false;
-                if (textCadSenha1.Enabled == false && textCadSenha.Enabled == false)
+                MessageBox.Show("Usuário inválido, deve possuir mais de 5 caracteres");
+                textCadLogin.Clear();
+
+            }
+            else if (novologin2.Length > 1) {
+
+                MessageBox.Show("Usuário não pode conter espaços");
+                textCadLogin.Clear();
+            }
+
+            else
+            {
+                if (pesq.tem == true)
                 {
+
                     MessageBox.Show("USUÁRIO JÁ EXISTE! FAVOR INFORMAR UM NOVO USUÁRIO");
                     textCadSenha.Text = "";
                     textCadSenha1.Text = "";
                     textCadLogin.Text = "";
                     textEmail.Text = "";
                 }
-            }
-            else
-            {
-                textCadSenha1.Enabled = true;
-                textCadSenha.Enabled = true;
             }
         }
 
@@ -125,13 +163,10 @@ namespace teste.Telas
 
         }
 
-        private void textEmail_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void textCadLogin_KeyPress(object sender, KeyPressEventArgs e)
-        {
+         {
 
 
         }

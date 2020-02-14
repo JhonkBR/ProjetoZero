@@ -46,6 +46,7 @@
             this.buttonVoltar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.TesteConex = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(101, 68);
+            this.label1.Location = new System.Drawing.Point(88, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 14;
@@ -75,10 +76,10 @@
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 176;
-            this.lineShape1.X2 = 388;
-            this.lineShape1.Y1 = 85;
-            this.lineShape1.Y2 = 85;
+            this.lineShape1.X1 = 169;
+            this.lineShape1.X2 = 381;
+            this.lineShape1.Y1 = 154;
+            this.lineShape1.Y2 = 154;
             // 
             // shapeContainer1
             // 
@@ -99,30 +100,30 @@
             this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape4.Enabled = false;
             this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 167;
-            this.lineShape4.X2 = 379;
-            this.lineShape4.Y1 = 257;
-            this.lineShape4.Y2 = 257;
+            this.lineShape4.X1 = 162;
+            this.lineShape4.X2 = 374;
+            this.lineShape4.Y1 = 275;
+            this.lineShape4.Y2 = 275;
             // 
             // lineShape3
             // 
             this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape3.Enabled = false;
             this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 174;
-            this.lineShape3.X2 = 386;
-            this.lineShape3.Y1 = 199;
-            this.lineShape3.Y2 = 199;
+            this.lineShape3.X1 = 163;
+            this.lineShape3.X2 = 375;
+            this.lineShape3.Y1 = 236;
+            this.lineShape3.Y2 = 236;
             // 
             // lineShape2
             // 
             this.lineShape2.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape2.Enabled = false;
             this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 173;
-            this.lineShape2.X2 = 385;
-            this.lineShape2.Y1 = 145;
-            this.lineShape2.Y2 = 145;
+            this.lineShape2.X1 = 164;
+            this.lineShape2.X2 = 376;
+            this.lineShape2.Y1 = 193;
+            this.lineShape2.Y2 = 193;
             // 
             // textServ
             // 
@@ -141,7 +142,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(101, 125);
+            this.label2.Location = new System.Drawing.Point(86, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 17;
@@ -153,7 +154,7 @@
             this.textUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUser.ForeColor = System.Drawing.Color.DimGray;
-            this.textUser.Location = new System.Drawing.Point(173, 122);
+            this.textUser.Location = new System.Drawing.Point(162, 173);
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(213, 20);
             this.textUser.TabIndex = 18;
@@ -163,7 +164,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(101, 174);
+            this.label3.Location = new System.Drawing.Point(94, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 21);
             this.label3.TabIndex = 19;
@@ -175,7 +176,7 @@
             this.textSenhaBanco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSenhaBanco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSenhaBanco.ForeColor = System.Drawing.Color.DimGray;
-            this.textSenhaBanco.Location = new System.Drawing.Point(173, 175);
+            this.textSenhaBanco.Location = new System.Drawing.Point(163, 216);
             this.textSenhaBanco.Name = "textSenhaBanco";
             this.textSenhaBanco.PasswordChar = '*';
             this.textSenhaBanco.Size = new System.Drawing.Size(213, 20);
@@ -186,7 +187,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(96, 237);
+            this.label4.Location = new System.Drawing.Point(88, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 21);
             this.label4.TabIndex = 21;
@@ -198,7 +199,7 @@
             this.textBanco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBanco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBanco.ForeColor = System.Drawing.Color.DimGray;
-            this.textBanco.Location = new System.Drawing.Point(167, 237);
+            this.textBanco.Location = new System.Drawing.Point(163, 253);
             this.textBanco.Name = "textBanco";
             this.textBanco.Size = new System.Drawing.Size(213, 20);
             this.textBanco.TabIndex = 22;
@@ -211,7 +212,7 @@
             this.buttonVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVoltar.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonVoltar.Location = new System.Drawing.Point(100, 301);
+            this.buttonVoltar.Location = new System.Drawing.Point(120, 316);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(112, 40);
             this.buttonVoltar.TabIndex = 23;
@@ -227,7 +228,7 @@
             this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnSalvar.Location = new System.Drawing.Point(254, 301);
+            this.btnSalvar.Location = new System.Drawing.Point(265, 316);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(112, 40);
             this.btnSalvar.TabIndex = 24;
@@ -243,13 +244,24 @@
             this.TesteConex.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TesteConex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TesteConex.ForeColor = System.Drawing.Color.LightGray;
-            this.TesteConex.Location = new System.Drawing.Point(394, 301);
+            this.TesteConex.Location = new System.Drawing.Point(469, 316);
             this.TesteConex.Name = "TesteConex";
-            this.TesteConex.Size = new System.Drawing.Size(112, 40);
+            this.TesteConex.Size = new System.Drawing.Size(56, 40);
             this.TesteConex.TabIndex = 25;
             this.TesteConex.Text = "TESTE";
             this.TesteConex.UseVisualStyleBackColor = false;
             this.TesteConex.Click += new System.EventHandler(this.TesteConex_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(131, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(258, 33);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "BANCO DE DADOS";
             // 
             // TelaConfigBanco
             // 
@@ -257,6 +269,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(556, 379);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.TesteConex);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.buttonVoltar);
@@ -301,5 +314,6 @@
         private System.Windows.Forms.Button buttonVoltar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button TesteConex;
+        private System.Windows.Forms.Label label5;
     }
 }

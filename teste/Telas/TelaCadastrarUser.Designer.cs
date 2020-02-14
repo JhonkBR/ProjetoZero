@@ -40,13 +40,13 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textEmail = new System.Windows.Forms.TextBox();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +55,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(44, 81);
+            this.label1.Location = new System.Drawing.Point(21, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 21);
+            this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Login:";
+            this.label1.Text = "Usuário: ";
             // 
             // textCadLogin
             // 
@@ -67,9 +67,9 @@
             this.textCadLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textCadLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCadLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.textCadLogin.Location = new System.Drawing.Point(96, 82);
+            this.textCadLogin.Location = new System.Drawing.Point(91, 168);
             this.textCadLogin.Name = "textCadLogin";
-            this.textCadLogin.Size = new System.Drawing.Size(178, 20);
+            this.textCadLogin.Size = new System.Drawing.Size(184, 20);
             this.textCadLogin.TabIndex = 1;
             this.textCadLogin.TextChanged += new System.EventHandler(this.textCadLogin_TextChanged);
             this.textCadLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCadLogin_KeyPress);
@@ -80,7 +80,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(32, 131);
+            this.label2.Location = new System.Drawing.Point(28, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 21);
             this.label2.TabIndex = 2;
@@ -92,7 +92,7 @@
             this.textCadSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textCadSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCadSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.textCadSenha.Location = new System.Drawing.Point(93, 132);
+            this.textCadSenha.Location = new System.Drawing.Point(95, 225);
             this.textCadSenha.Name = "textCadSenha";
             this.textCadSenha.PasswordChar = '*';
             this.textCadSenha.Size = new System.Drawing.Size(181, 20);
@@ -104,10 +104,10 @@
             this.textCadSenha1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textCadSenha1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCadSenha1.ForeColor = System.Drawing.Color.DimGray;
-            this.textCadSenha1.Location = new System.Drawing.Point(476, 76);
+            this.textCadSenha1.Location = new System.Drawing.Point(490, 163);
             this.textCadSenha1.Name = "textCadSenha1";
             this.textCadSenha1.PasswordChar = '*';
-            this.textCadSenha1.Size = new System.Drawing.Size(158, 20);
+            this.textCadSenha1.Size = new System.Drawing.Size(181, 20);
             this.textCadSenha1.TabIndex = 4;
             // 
             // label3
@@ -115,7 +115,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(330, 82);
+            this.label3.Location = new System.Drawing.Point(343, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 21);
             this.label3.TabIndex = 5;
@@ -129,11 +129,11 @@
             this.buttonCadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCadastrar.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCadastrar.Location = new System.Drawing.Point(354, 285);
+            this.buttonCadastrar.Location = new System.Drawing.Point(419, 348);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(283, 40);
             this.buttonCadastrar.TabIndex = 8;
-            this.buttonCadastrar.Text = "ENTRAR";
+            this.buttonCadastrar.Text = "CADASTRAR";
             this.buttonCadastrar.UseVisualStyleBackColor = false;
             this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
@@ -145,7 +145,7 @@
             this.buttonCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCancelar.Location = new System.Drawing.Point(36, 285);
+            this.buttonCancelar.Location = new System.Drawing.Point(57, 348);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(262, 40);
             this.buttonCancelar.TabIndex = 9;
@@ -159,12 +159,12 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape3,
             this.lineShape4,
             this.lineShape5,
-            this.lineShape3,
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(656, 364);
+            this.shapeContainer1.Size = new System.Drawing.Size(775, 428);
             this.shapeContainer1.TabIndex = 11;
             this.shapeContainer1.TabStop = false;
             // 
@@ -173,55 +173,45 @@
             this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape4.Enabled = false;
             this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 410;
-            this.lineShape4.X2 = 627;
-            this.lineShape4.Y1 = 151;
-            this.lineShape4.Y2 = 151;
+            this.lineShape4.X1 = 403;
+            this.lineShape4.X2 = 717;
+            this.lineShape4.Y1 = 250;
+            this.lineShape4.Y2 = 250;
             this.lineShape4.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // lineShape5
             // 
             this.lineShape5.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 318;
-            this.lineShape5.X2 = 318;
-            this.lineShape5.Y1 = 78;
+            this.lineShape5.X1 = 336;
+            this.lineShape5.X2 = 336;
+            this.lineShape5.Y1 = 149;
             this.lineShape5.Y2 = 270;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape3.Enabled = false;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 476;
-            this.lineShape3.X2 = 636;
-            this.lineShape3.Y1 = 99;
-            this.lineShape3.Y2 = 99;
             // 
             // lineShape2
             // 
             this.lineShape2.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape2.Enabled = false;
             this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 94;
-            this.lineShape2.X2 = 276;
-            this.lineShape2.Y1 = 155;
-            this.lineShape2.Y2 = 155;
+            this.lineShape2.X1 = 95;
+            this.lineShape2.X2 = 277;
+            this.lineShape2.Y1 = 245;
+            this.lineShape2.Y2 = 245;
             this.lineShape2.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // lineShape1
             // 
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 96;
-            this.lineShape1.X2 = 270;
-            this.lineShape1.Y1 = 104;
-            this.lineShape1.Y2 = 104;
+            this.lineShape1.X1 = 91;
+            this.lineShape1.X2 = 279;
+            this.lineShape1.Y1 = 191;
+            this.lineShape1.Y2 = 191;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(616, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(730, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 15);
             this.pictureBox1.TabIndex = 12;
@@ -233,7 +223,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(155, 22);
+            this.label6.Location = new System.Drawing.Point(193, 36);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(317, 33);
             this.label6.TabIndex = 16;
@@ -244,7 +234,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(350, 131);
+            this.label4.Location = new System.Drawing.Point(343, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 21);
             this.label4.TabIndex = 17;
@@ -256,18 +246,26 @@
             this.textEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.textEmail.Location = new System.Drawing.Point(410, 131);
+            this.textEmail.Location = new System.Drawing.Point(409, 227);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(224, 20);
+            this.textEmail.Size = new System.Drawing.Size(315, 20);
             this.textEmail.TabIndex = 18;
-            this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 490;
+            this.lineShape3.X2 = 673;
+            this.lineShape3.Y1 = 184;
+            this.lineShape3.Y2 = 184;
             // 
             // CadastrarUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(656, 364);
+            this.ClientSize = new System.Drawing.Size(775, 428);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
@@ -282,7 +280,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(656, 364);
             this.MinimumSize = new System.Drawing.Size(656, 364);
             this.Name = "CadastrarUser";
             this.Opacity = 0.95D;
@@ -307,7 +304,6 @@
         private System.Windows.Forms.Button buttonCadastrar;
         private System.Windows.Forms.Button buttonCancelar;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -316,5 +312,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textEmail;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
     }
 }

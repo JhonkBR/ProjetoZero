@@ -43,6 +43,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btn_cadastraruser = new System.Windows.Forms.Button();
             this.btn_Banco = new System.Windows.Forms.Button();
+            this.labelErrorUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
@@ -226,12 +227,21 @@
             this.btn_Banco.UseVisualStyleBackColor = false;
             this.btn_Banco.Click += new System.EventHandler(this.btn_Banco_Click);
             // 
+            // labelErrorUser
+            // 
+            this.labelErrorUser.AutoSize = true;
+            this.labelErrorUser.Location = new System.Drawing.Point(279, 112);
+            this.labelErrorUser.Name = "labelErrorUser";
+            this.labelErrorUser.Size = new System.Drawing.Size(0, 13);
+            this.labelErrorUser.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 360);
+            this.Controls.Add(this.labelErrorUser);
             this.Controls.Add(this.btn_Banco);
             this.Controls.Add(this.btn_cadastraruser);
             this.Controls.Add(this.btnMinimizar);
@@ -275,6 +285,7 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Button btn_cadastraruser;
         private System.Windows.Forms.Button btn_Banco;
+        private System.Windows.Forms.Label labelErrorUser;
     }
 }
 

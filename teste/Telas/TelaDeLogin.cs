@@ -136,22 +136,26 @@ namespace teste
             //fiz um comando comum para para mostrar o acesso e finalizar
             if (textUsuario.Text == "USUARIO" & textSenha.Text == "SENHA")
             {
-                MessageBox.Show("CREDENCIAIS EM BRANCO!");
-            }
-            
-            if (pesq.tem == true) {
-                this.Hide();
-                TelaCentral pai = new TelaCentral();
-                pai.Visible = true;
-                MessageBox.Show("Online!");
-               
-            }
-            else
-            {
-                MessageBox.Show("USUÁRIO OU SENHA INVÁLIDO!");
+                labelErrorUser.ForeColor = Color.Red;
+                labelErrorUser.Text = ("CREDENCIAIS EM BRANCO!");
             }
 
-           
+            else
+            {
+                if (pesq.tem == true)
+                {
+                    this.Hide();
+                    TelaCentral pai = new TelaCentral();
+                    pai.Visible = true;
+                    MessageBox.Show("Online!");
+                }
+                else
+                {
+                    labelErrorUser.ForeColor = Color.Red;
+                    labelErrorUser.Text = ("USUÁRIO OU SENHA INVÁLIDOS!");
+                }
+
+            }
 
         }
        
