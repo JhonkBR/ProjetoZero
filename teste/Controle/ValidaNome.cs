@@ -10,7 +10,7 @@ namespace teste.Controle
     {
         bool retorno = false; 
         public bool RetornaNome(string nome) {
-            if (string.IsNullOrEmpty(nome) || nome.Length < 4 == true) {
+            if (string.IsNullOrEmpty(nome) || nome.Length <= 4 == true) {
 
                 retorno = true;
             

@@ -37,7 +37,7 @@ namespace teste.Telas
             Email mail = new Email();
             RetornaBanco ps = new RetornaBanco();
             ValidaSegurancaSenha Senha = new ValidaSegurancaSenha();
-            ForcaDaSenha retorno = Senha.GetForcaDaSenha(textCadSenha.Text);
+
 
             if (textCadSenha.Text != textCadSenha1.Text)
             {
@@ -45,14 +45,15 @@ namespace teste.Telas
                 labelErroSenha.ForeColor = Color.Red;
 
             }
-            
-            else if (mail.ValidaEmailValido(textEmail.Text) == false ||ps.Possuiemail(textEmail.Text) == true)
-                { 
-                labelErrorEmail.Text = ("E-MAIL INVÁLIDO!");
+
+            else if (mail.ValidaEmailValido(textEmail.Text) == false || ps.Possuiemail(textEmail.Text) == true)
+            {
+                labelErrorEmail.Text = ("E-MAIL INVÁLIDO OU JÁ CADASTRADO!");
                 labelErrorEmail.ForeColor = Color.Red;
             }
-            else {
-                
+            else
+            {
+                ForcaDaSenha retorno = Senha.GetForcaDaSenha(textCadSenha.Text);
                 string retornoString = Convert.ToString(retorno);
                 if (retornoString == "Aceitavel" || retornoString == "Forte" || retornoString == "Segura")
                 {
@@ -64,11 +65,13 @@ namespace teste.Telas
                     textCadSenha1.Clear();
                     textCadLogin.Clear();
                     textEmail.Clear();
-                    labelErroSenha.Text = ("SENHA FORTE!");
-                    labelErroSenha.ForeColor = Color.Green;
+                    labelErroSenha.Text = "";
+                    labelUsuario.Text = "";
+                    labelErrorEmail.Text = "";
 
                 }
-                else {
+                else
+                {
                     labelErroSenha.Text = ("SENHA FRACA!");
                     labelErroSenha.ForeColor = Color.Red;
                 }
@@ -122,7 +125,8 @@ namespace teste.Telas
                 labelUsuario.ForeColor = Color.Red;
                 textCadLogin.Clear();
             }
-            else if (novologin2.Length > 1) {
+            else if (novologin2.Length > 1)
+            {
 
                 labelUsuario.Text = ("USUÁRIO NÃO PODE CONTER ESPAÇOS");
                 labelUsuario.ForeColor = Color.Red;
@@ -142,8 +146,9 @@ namespace teste.Telas
                     textCadLogin.Clear();
                     textEmail.Clear();
                 }
-                else {
-                    labelUsuario.Text = ("USUÁRIO VÁLIDO OU JÁ CADASTRADO!");
+                else
+                {
+                    labelUsuario.Text = ("USUÁRIO VÁLIDO!");
                     labelUsuario.ForeColor = Color.Green;
                 }
             }
@@ -157,9 +162,44 @@ namespace teste.Telas
 
 
         private void textCadLogin_KeyPress(object sender, KeyPressEventArgs e)
-         {
+        {
 
 
+        }
+
+        private void textCadSenha_Leave(object sender, EventArgs e)
+        {
+            ValidaSegurancaSenha Senha = new ValidaSegurancaSenha();
+            ForcaDaSenha retorno = Senha.GetForcaDaSenha(textCadSenha.Text);
+            string retornoString = Convert.ToString(retorno);
+            if (retornoString == "Aceitavel" || retornoString == "Forte" || retornoString == "Segura")
+            {
+                labelErroSenha.Text = "SENHA FORTE!";
+                labelErroSenha.ForeColor = Color.Green;
+            }
+            else {
+                labelErroSenha.Text = "SENHA FRACA!";
+                labelErroSenha.ForeColor = Color.Red;
+            }
+        }
+
+        private void textCadSenha1_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEmail_Leave(object sender, EventArgs e)
+        {
+            Email mail = new Email();
+            if (mail.ValidaEmailValido(textEmail.Text) == false)
+            {
+                labelErrorEmail.Text = ("E-MAIL INVÁLIDO!");
+                labelErrorEmail.ForeColor = Color.Red;
+            }
+            else {
+                labelErrorEmail.Text = ("E-MAIL VÁLIDO!");
+                labelErrorEmail.ForeColor = Color.Green;
+            }
         }
     }
 }

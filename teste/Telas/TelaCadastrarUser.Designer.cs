@@ -100,6 +100,7 @@
             this.textCadSenha.PasswordChar = '*';
             this.textCadSenha.Size = new System.Drawing.Size(181, 20);
             this.textCadSenha.TabIndex = 3;
+            this.textCadSenha.Leave += new System.EventHandler(this.textCadSenha_Leave);
             // 
             // textCadSenha1
             // 
@@ -112,6 +113,7 @@
             this.textCadSenha1.PasswordChar = '*';
             this.textCadSenha1.Size = new System.Drawing.Size(181, 20);
             this.textCadSenha1.TabIndex = 4;
+            this.textCadSenha1.Leave += new System.EventHandler(this.textCadSenha1_Leave);
             // 
             // label3
             // 
@@ -174,6 +176,7 @@
             // lineShape3
             // 
             this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape3.Enabled = false;
             this.lineShape3.Name = "lineShape3";
             this.lineShape3.X1 = 490;
             this.lineShape3.X2 = 673;
@@ -214,6 +217,7 @@
             // lineShape1
             // 
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 91;
             this.lineShape1.X2 = 279;
@@ -262,33 +266,31 @@
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(315, 20);
             this.textEmail.TabIndex = 18;
+            this.textEmail.Leave += new System.EventHandler(this.textEmail_Leave);
             // 
             // labelUsuario
             // 
             this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Location = new System.Drawing.Point(54, 200);
+            this.labelUsuario.Location = new System.Drawing.Point(92, 205);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(41, 13);
+            this.labelUsuario.Size = new System.Drawing.Size(0, 13);
             this.labelUsuario.TabIndex = 19;
-            this.labelUsuario.Text = "usuario";
             // 
             // labelErroSenha
             // 
             this.labelErroSenha.AutoSize = true;
-            this.labelErroSenha.Location = new System.Drawing.Point(92, 250);
+            this.labelErroSenha.Location = new System.Drawing.Point(99, 249);
             this.labelErroSenha.Name = "labelErroSenha";
-            this.labelErroSenha.Size = new System.Drawing.Size(41, 13);
+            this.labelErroSenha.Size = new System.Drawing.Size(0, 13);
             this.labelErroSenha.TabIndex = 20;
-            this.labelErroSenha.Text = "usuario";
             // 
             // labelErrorEmail
             // 
             this.labelErrorEmail.AutoSize = true;
             this.labelErrorEmail.Location = new System.Drawing.Point(406, 258);
             this.labelErrorEmail.Name = "labelErrorEmail";
-            this.labelErrorEmail.Size = new System.Drawing.Size(41, 13);
+            this.labelErrorEmail.Size = new System.Drawing.Size(0, 13);
             this.labelErrorEmail.TabIndex = 21;
-            this.labelErrorEmail.Text = "usuario";
             // 
             // CadastrarUser
             // 
