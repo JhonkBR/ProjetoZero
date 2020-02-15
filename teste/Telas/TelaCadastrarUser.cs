@@ -41,19 +41,15 @@ namespace teste.Telas
 
             if (textCadSenha.Text != textCadSenha1.Text)
             {
-                MessageBox.Show("SENHA NÃO COINCIDEM!");
+                labelErroSenha.Text = ("SENHA NÃO COINCIDEM!");
+                labelErroSenha.ForeColor = Color.Red;
 
             }
-            else if (textCadLogin.Text.Length < 5)
-            {
-                MessageBox.Show("O USUÁRIO DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
-
-            }
-
             
             else if (mail.ValidaEmailValido(textEmail.Text) == false ||ps.Possuiemail(textEmail.Text) == true)
                 { 
-                MessageBox.Show("E-mail inválido! ou já cadastrado");
+                labelErrorEmail.Text = ("E-MAIL INVÁLIDO!");
+                labelErrorEmail.ForeColor = Color.Red;
             }
             else {
                 
@@ -64,33 +60,21 @@ namespace teste.Telas
                     ManipulaBanco login = new ManipulaBanco();
                     login.CadastrarLogin(textCadLogin.Text, textCadSenha1.Text, textEmail.Text);
                     MessageBox.Show(login.mensagem);
-                    textCadSenha.Text = "";
-                    textCadSenha1.Text = "";
-                    textCadLogin.Text = "";
-                    textEmail.Text = "";
+                    textCadSenha.Clear();
+                    textCadSenha1.Clear();
+                    textCadLogin.Clear();
+                    textEmail.Clear();
+                    labelErroSenha.Text = ("SENHA FORTE!");
+                    labelErroSenha.ForeColor = Color.Green;
 
                 }
                 else {
-                    MessageBox.Show("Senha fraca");
+                    labelErroSenha.Text = ("SENHA FRACA!");
+                    labelErroSenha.ForeColor = Color.Red;
                 }
 
+
             }
-            //else if (textCadSenha.Text.Length < 4)
-            //{
-            //    MessageBox.Show("A SENHA DEVE POSSUIR NO MÍNIMO 5 CARACTERES!");
-
-                //}
-                //else if (textCadSenha.Text == "")
-                //{
-                //    MessageBox.Show("SENHA EM BRANCO!");
-
-                //}
-            
-
-            //else
-            //{
-
-            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -134,13 +118,14 @@ namespace teste.Telas
 
             if (nome.RetornaNome(textCadLogin.Text) == true)
             {
-                MessageBox.Show("Usuário inválido, deve possuir mais de 5 caracteres");
+                labelUsuario.Text = ("O USUÁRIO NO MÍNIMO 5 CARACTERES!");
+                labelUsuario.ForeColor = Color.Red;
                 textCadLogin.Clear();
-
             }
             else if (novologin2.Length > 1) {
 
-                MessageBox.Show("Usuário não pode conter espaços");
+                labelUsuario.Text = ("USUÁRIO NÃO PODE CONTER ESPAÇOS");
+                labelUsuario.ForeColor = Color.Red;
                 textCadLogin.Clear();
             }
 
@@ -149,11 +134,17 @@ namespace teste.Telas
                 if (pesq.tem == true)
                 {
 
-                    MessageBox.Show("USUÁRIO JÁ EXISTE! FAVOR INFORMAR UM NOVO USUÁRIO");
-                    textCadSenha.Text = "";
-                    textCadSenha1.Text = "";
-                    textCadLogin.Text = "";
-                    textEmail.Text = "";
+
+                    labelUsuario.Text = ("USUÁRIO EXISTENTE!");
+                    labelUsuario.ForeColor = Color.Red;
+                    textCadSenha.Clear();
+                    textCadSenha1.Clear();
+                    textCadLogin.Clear();
+                    textEmail.Clear();
+                }
+                else {
+                    labelUsuario.Text = ("USUÁRIO VÁLIDO OU JÁ CADASTRADO!");
+                    labelUsuario.ForeColor = Color.Green;
                 }
             }
         }

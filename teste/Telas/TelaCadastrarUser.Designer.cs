@@ -38,6 +38,7 @@
             this.buttonCadastrar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -46,7 +47,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textEmail = new System.Windows.Forms.TextBox();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.labelUsuario = new System.Windows.Forms.Label();
+            this.labelErroSenha = new System.Windows.Forms.Label();
+            this.labelErrorEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +171,15 @@
             this.shapeContainer1.TabIndex = 11;
             this.shapeContainer1.TabStop = false;
             // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 490;
+            this.lineShape3.X2 = 673;
+            this.lineShape3.Y1 = 184;
+            this.lineShape3.Y2 = 184;
+            // 
             // lineShape4
             // 
             this.lineShape4.BorderColor = System.Drawing.Color.DimGray;
@@ -251,14 +263,32 @@
             this.textEmail.Size = new System.Drawing.Size(315, 20);
             this.textEmail.TabIndex = 18;
             // 
-            // lineShape3
+            // labelUsuario
             // 
-            this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 490;
-            this.lineShape3.X2 = 673;
-            this.lineShape3.Y1 = 184;
-            this.lineShape3.Y2 = 184;
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Location = new System.Drawing.Point(54, 200);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(41, 13);
+            this.labelUsuario.TabIndex = 19;
+            this.labelUsuario.Text = "usuario";
+            // 
+            // labelErroSenha
+            // 
+            this.labelErroSenha.AutoSize = true;
+            this.labelErroSenha.Location = new System.Drawing.Point(92, 250);
+            this.labelErroSenha.Name = "labelErroSenha";
+            this.labelErroSenha.Size = new System.Drawing.Size(41, 13);
+            this.labelErroSenha.TabIndex = 20;
+            this.labelErroSenha.Text = "usuario";
+            // 
+            // labelErrorEmail
+            // 
+            this.labelErrorEmail.AutoSize = true;
+            this.labelErrorEmail.Location = new System.Drawing.Point(406, 258);
+            this.labelErrorEmail.Name = "labelErrorEmail";
+            this.labelErrorEmail.Size = new System.Drawing.Size(41, 13);
+            this.labelErrorEmail.TabIndex = 21;
+            this.labelErrorEmail.Text = "usuario";
             // 
             // CadastrarUser
             // 
@@ -266,6 +296,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(775, 428);
+            this.Controls.Add(this.labelErrorEmail);
+            this.Controls.Add(this.labelErroSenha);
+            this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
@@ -313,5 +346,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textEmail;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private System.Windows.Forms.Label labelUsuario;
+        private System.Windows.Forms.Label labelErroSenha;
+        private System.Windows.Forms.Label labelErrorEmail;
     }
 }
