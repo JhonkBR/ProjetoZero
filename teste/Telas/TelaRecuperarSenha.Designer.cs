@@ -183,22 +183,22 @@
             // labelMensagemUsuario
             // 
             this.labelMensagemUsuario.AutoSize = true;
-            this.labelMensagemUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMensagemUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.labelMensagemUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.labelMensagemUsuario.Location = new System.Drawing.Point(221, 156);
             this.labelMensagemUsuario.Margin = new System.Windows.Forms.Padding(3, 0, 3, 1);
             this.labelMensagemUsuario.Name = "labelMensagemUsuario";
-            this.labelMensagemUsuario.Size = new System.Drawing.Size(0, 16);
+            this.labelMensagemUsuario.Size = new System.Drawing.Size(0, 13);
             this.labelMensagemUsuario.TabIndex = 22;
             // 
             // labelMensagemPin
             // 
             this.labelMensagemPin.AutoSize = true;
-            this.labelMensagemPin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic);
+            this.labelMensagemPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.labelMensagemPin.ForeColor = System.Drawing.Color.DimGray;
             this.labelMensagemPin.Location = new System.Drawing.Point(256, 241);
             this.labelMensagemPin.Name = "labelMensagemPin";
-            this.labelMensagemPin.Size = new System.Drawing.Size(0, 16);
+            this.labelMensagemPin.Size = new System.Drawing.Size(0, 13);
             this.labelMensagemPin.TabIndex = 23;
             this.labelMensagemPin.Visible = false;
             // 

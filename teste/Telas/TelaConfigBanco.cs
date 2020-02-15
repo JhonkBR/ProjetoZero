@@ -43,11 +43,13 @@ namespace teste.Telas
                 Properties.Settings.Default.Senha = textSenhaBanco.Text;
                 Properties.Settings.Default.Banco = textBanco.Text;
                 Properties.Settings.Default.Save();
-                MessageBox.Show("Salvo com êxito!!");
+                labelErrorBanco.Text = ("");
+                MessageBox.Show("SALVO COM ÊXITO!");
+                lineShape1.Visible = true;
             }
             catch (Exception)
             {
-                MessageBox.Show("erro ao salvar");
+                MessageBox.Show("ERRO AO SALVAR!");
             }
         }
 
@@ -71,13 +73,22 @@ namespace teste.Telas
             try
             {
                 con.Conectar();
-                MessageBox.Show("Logado com êxito");
+                labelErrorBanco.Text = ("LOGADO COM ÊXITO!");
+                labelErrorBanco.ForeColor = Color.Green;
+                //MessageBox.Show("Logado com êxito");
                 con.Desconectar();
             }
             catch (SqlException)
             {
                 MessageBox.Show("Erro ao conectar no banco de dados, favor verificar suas credenciais");
+                labelErrorBanco.Text = ("ERRO AO CONECTAR!");
+                labelErrorBanco.ForeColor = Color.Red;
             }
+        }
+
+        private void textSenhaBanco_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

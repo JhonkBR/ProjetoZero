@@ -47,6 +47,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.TesteConex = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.labelErrorBanco = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,8 +77,8 @@
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.Enabled = false;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 167;
-            this.lineShape1.X2 = 379;
+            this.lineShape1.X1 = 165;
+            this.lineShape1.X2 = 377;
             this.lineShape1.Y1 = 154;
             this.lineShape1.Y2 = 154;
             // 
@@ -131,7 +132,7 @@
             this.textServ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textServ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textServ.ForeColor = System.Drawing.Color.DimGray;
-            this.textServ.Location = new System.Drawing.Point(168, 134);
+            this.textServ.Location = new System.Drawing.Point(164, 130);
             this.textServ.Name = "textServ";
             this.textServ.Size = new System.Drawing.Size(213, 20);
             this.textServ.TabIndex = 16;
@@ -154,7 +155,7 @@
             this.textUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUser.ForeColor = System.Drawing.Color.DimGray;
-            this.textUser.Location = new System.Drawing.Point(162, 173);
+            this.textUser.Location = new System.Drawing.Point(162, 169);
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(213, 20);
             this.textUser.TabIndex = 18;
@@ -176,11 +177,12 @@
             this.textSenhaBanco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSenhaBanco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSenhaBanco.ForeColor = System.Drawing.Color.DimGray;
-            this.textSenhaBanco.Location = new System.Drawing.Point(163, 216);
+            this.textSenhaBanco.Location = new System.Drawing.Point(163, 213);
             this.textSenhaBanco.Name = "textSenhaBanco";
             this.textSenhaBanco.PasswordChar = '*';
             this.textSenhaBanco.Size = new System.Drawing.Size(213, 20);
             this.textSenhaBanco.TabIndex = 20;
+            this.textSenhaBanco.TextChanged += new System.EventHandler(this.textSenhaBanco_TextChanged);
             // 
             // label4
             // 
@@ -199,7 +201,7 @@
             this.textBanco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBanco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBanco.ForeColor = System.Drawing.Color.DimGray;
-            this.textBanco.Location = new System.Drawing.Point(163, 253);
+            this.textBanco.Location = new System.Drawing.Point(163, 251);
             this.textBanco.Name = "textBanco";
             this.textBanco.Size = new System.Drawing.Size(213, 20);
             this.textBanco.TabIndex = 22;
@@ -212,7 +214,7 @@
             this.buttonVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVoltar.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonVoltar.Location = new System.Drawing.Point(90, 316);
+            this.buttonVoltar.Location = new System.Drawing.Point(109, 316);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(112, 40);
             this.buttonVoltar.TabIndex = 23;
@@ -228,7 +230,7 @@
             this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnSalvar.Location = new System.Drawing.Point(269, 316);
+            this.btnSalvar.Location = new System.Drawing.Point(238, 316);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(112, 40);
             this.btnSalvar.TabIndex = 24;
@@ -244,7 +246,7 @@
             this.TesteConex.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TesteConex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TesteConex.ForeColor = System.Drawing.Color.LightGray;
-            this.TesteConex.Location = new System.Drawing.Point(418, 316);
+            this.TesteConex.Location = new System.Drawing.Point(366, 316);
             this.TesteConex.Name = "TesteConex";
             this.TesteConex.Size = new System.Drawing.Size(112, 40);
             this.TesteConex.TabIndex = 25;
@@ -263,12 +265,21 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "BANCO DE DADOS";
             // 
+            // labelErrorBanco
+            // 
+            this.labelErrorBanco.AutoSize = true;
+            this.labelErrorBanco.Location = new System.Drawing.Point(366, 293);
+            this.labelErrorBanco.Name = "labelErrorBanco";
+            this.labelErrorBanco.Size = new System.Drawing.Size(0, 13);
+            this.labelErrorBanco.TabIndex = 28;
+            // 
             // TelaConfigBanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(556, 379);
+            this.Controls.Add(this.labelErrorBanco);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TesteConex);
             this.Controls.Add(this.btnSalvar);
@@ -284,6 +295,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(556, 379);
+            this.MinimumSize = new System.Drawing.Size(556, 379);
             this.Name = "TelaConfigBanco";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -315,5 +328,6 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button TesteConex;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelErrorBanco;
     }
 }
