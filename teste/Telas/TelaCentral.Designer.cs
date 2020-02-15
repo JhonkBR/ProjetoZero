@@ -46,10 +46,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -230,11 +230,21 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(-2, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 434);
             this.panel1.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(7, 385);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 34);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "@Corporate \r\nraparigasWeb";
             // 
             // panel2
             // 
@@ -243,7 +253,6 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnEncerrar);
             this.panel2.Controls.Add(this.btnMinimizar);
-            this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(-2, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(925, 51);
@@ -270,17 +279,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(7, 385);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 34);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "@Corporate \r\nraparigasWeb";
             // 
             // TelaCentral
             // 
