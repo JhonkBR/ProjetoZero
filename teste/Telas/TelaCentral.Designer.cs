@@ -143,6 +143,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 15;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox11
             // 
@@ -234,6 +235,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 434);
             this.panel1.TabIndex = 24;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label9
             // 
@@ -257,7 +259,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(925, 51);
             this.panel2.TabIndex = 25;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // label8
             // 
@@ -307,6 +309,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Painel";
             this.Load += new System.EventHandler(this.Painel_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TelaCentral_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

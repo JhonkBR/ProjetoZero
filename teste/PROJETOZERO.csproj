@@ -116,6 +116,12 @@
     <Compile Include="DAO\RetornaBanco.cs" />
     <Compile Include="DAO\SalvarCredenciaisServi.cs" />
     <Compile Include="Json\Pessoa.cs" />
+    <Compile Include="Telas\Produtos\TelaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Produtos\TelaProdutos.Designer.cs">
+      <DependentUpon>TelaProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TelaCadastrarUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     <Compile Include="Telas\TelaTesteJson.Designer.cs">
       <DependentUpon>TelaTesteJson.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\Produtos\TelaProdutos.resx">
+      <DependentUpon>TelaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaCadastrarUser.resx">
       <DependentUpon>TelaCadastrarUser.cs</DependentUpon>
     </EmbeddedResource>
