@@ -60,7 +60,9 @@ namespace teste.Telas
                         try
                         {
                             Atualiza.AlteraSenha(TextBoxConfirmNewSenha.Text, Credencial);
-                            MessageBox.Show("Senha alterada com êxito!!");
+                            labelErrorRecSenha.Text = ("Senha alterada com êxito!!");
+                            labelErrorRecSenha.Visible = true;
+                            labelErrorRecSenha.ForeColor = Color.Red;
                             this.Dispose();
                             Form1 login = new Form1();
                             login.Show();
@@ -71,21 +73,24 @@ namespace teste.Telas
                         }
                     }
                     else {
-                        MessageBox.Show("Senha fraca!");
+                        labelErrorRecSenha.Text = "Senha fraca!";
+                        labelErrorRecSenha.ForeColor = Color.Red;
                         TextBoxConfirmNewSenha.Clear();
                         TextBoxNewSenha.Clear();
                     }
 
                 }
                 else {
-                    MessageBox.Show("Senhas não batem");
+                    labelErrorRecSenha.Text= ("Senhas não batem");
+                    labelErrorRecSenha.ForeColor = Color.Red;
                     TextBoxConfirmNewSenha.Clear();
                     TextBoxNewSenha.Clear();
                 }
 
             }
             else {
-                MessageBox.Show("Campo em branco!");
+                labelErrorRecSenha.Text = ("Campo em branco!");
+                labelErrorRecSenha.ForeColor = Color.Red;
             }
 
         }

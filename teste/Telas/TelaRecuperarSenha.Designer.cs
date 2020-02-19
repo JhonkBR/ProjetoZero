@@ -196,7 +196,7 @@
             this.labelMensagemPin.AutoSize = true;
             this.labelMensagemPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.labelMensagemPin.ForeColor = System.Drawing.Color.DimGray;
-            this.labelMensagemPin.Location = new System.Drawing.Point(256, 241);
+            this.labelMensagemPin.Location = new System.Drawing.Point(260, 249);
             this.labelMensagemPin.Name = "labelMensagemPin";
             this.labelMensagemPin.Size = new System.Drawing.Size(0, 13);
             this.labelMensagemPin.TabIndex = 23;

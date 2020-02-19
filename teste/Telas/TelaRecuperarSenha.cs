@@ -41,7 +41,7 @@ namespace teste.Telas
             if (TextLoginRecuperar.Text == "j") 
                 TextLoginRecuperar.Text = "jhoocandido@gmail.com";
             Email vl = new Email();
-            if (vl.ValidaEmailValido(TextLoginRecuperar.Text) == true)
+             if (vl.ValidaEmailValido(TextLoginRecuperar.Text) == true)
             {
                 RetornaBanco ps = new RetornaBanco();
                 //
@@ -79,7 +79,6 @@ namespace teste.Telas
                                 if (login.PesquisaPin(TextLoginRecuperar.Text, Convert.ToInt32(textBoxPin.Text)) == true)
                                 {
                                     TelaMudarSenha.Credencial = TextLoginRecuperar.Text;
-                                    MessageBox.Show("PIN enviado por E-mail!");
                                     TelaRecup.Show();
                                     this.Dispose();
 
@@ -88,6 +87,7 @@ namespace teste.Telas
 
                                 else
                                 {
+                                    labelMensagemPin.Visible = true;
                                     labelMensagemPin.Text = ("PIN não encontrado!");
                                     labelMensagemPin.ForeColor = Color.Red;
                                     textBoxPin.Clear();
@@ -95,8 +95,11 @@ namespace teste.Telas
 
                         }
                     }
-                    finally { 
+                    catch {
+                        labelMensagemPin.Visible = true;
+                        labelMensagemPin.ForeColor = Color.Red;
                         labelMensagemPin.Text = ("PIN inválido!");
+                        textBoxPin.Clear();
                     }
                 }
                 else

@@ -116,10 +116,12 @@
     <Compile Include="DAO\RetornaBanco.cs" />
     <Compile Include="DAO\SalvarCredenciaisServi.cs" />
     <Compile Include="Json\Pessoa.cs" />
-    <Compile Include="Telas\Produtos\TelaProdutos.cs">
+    <Compile Include="Produtos\PesquisaProdutos.cs" />
+    <Compile Include="Produtos\ProdutosBD.cs" />
+    <Compile Include="Telas\ProdutosPesq\TelaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Produtos\TelaProdutos.Designer.cs">
+    <Compile Include="Telas\ProdutosPesq\TelaProdutos.Designer.cs">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaCadastrarUser.cs">
@@ -172,7 +174,7 @@
     <Compile Include="Telas\TelaTesteJson.Designer.cs">
       <DependentUpon>TelaTesteJson.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Telas\Produtos\TelaProdutos.resx">
+    <EmbeddedResource Include="Telas\ProdutosPesq\TelaProdutos.resx">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaCadastrarUser.resx">
@@ -245,9 +247,7 @@
     <Content Include="Icones\how.png" />
     <Content Include="Icones\Minimize_Icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CadastroProdutos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />
   <Import Project="..\packages\Refit.5.0.23\build\net461\refit.targets" Condition="Exists('..\packages\Refit.5.0.23\build\net461\refit.targets')" />

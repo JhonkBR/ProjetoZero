@@ -40,6 +40,7 @@
             this.TextBoxNewSenha = new System.Windows.Forms.TextBox();
             this.TextBoxConfirmNewSenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelErrorRecSenha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,12 +176,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // labelErrorRecSenha
+            // 
+            this.labelErrorRecSenha.AutoSize = true;
+            this.labelErrorRecSenha.Location = new System.Drawing.Point(272, 214);
+            this.labelErrorRecSenha.Name = "labelErrorRecSenha";
+            this.labelErrorRecSenha.Size = new System.Drawing.Size(0, 13);
+            this.labelErrorRecSenha.TabIndex = 24;
+            // 
             // TelaMudarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(655, 396);
+            this.Controls.Add(this.labelErrorRecSenha);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TextBoxConfirmNewSenha);
             this.Controls.Add(this.TextBoxNewSenha);
@@ -216,5 +226,6 @@
         private System.Windows.Forms.TextBox TextBoxNewSenha;
         private System.Windows.Forms.TextBox TextBoxConfirmNewSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelErrorRecSenha;
     }
 }

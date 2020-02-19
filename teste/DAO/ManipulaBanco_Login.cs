@@ -22,13 +22,15 @@ namespace teste.DAO
         {
             SqlCommand cmd = new SqlCommand();
             // Comando sql -- Insert -- Sqlcommand
-            cmd.CommandText = "INSERT INTO LOGIN (USUARIO,SENHA,email) VALUES (@USUARIO,@SENHA,@EMAIL)";
+
+            string guid = Convert.ToString(Guid.NewGuid());
+            cmd.CommandText = "INSERT INTO LOGIN (USUARIO,SENHA,email,PIN,GUID_USUARIO,DATA_CADASTRO) VALUES (@USUARIO,@SENHA,@EMAIL,NULL,@GUID,getdate())";
 
             //Parametros
             cmd.Parameters.AddWithValue("@USUARIO", usuario);
             cmd.Parameters.AddWithValue("@SENHA", senha);
             cmd.Parameters.AddWithValue("@EMAIL", email);
-
+            cmd.Parameters.AddWithValue("@GUID", guid);
             //conectar -- Conexao
             try
             {
@@ -54,6 +56,7 @@ namespace teste.DAO
         //MÉTODO PARA VERIFICAR SE O USUÁRIO EXISTE 2.0 - IREI ANALISAR RSRS
         public bool RetornaLogin(string usuario, string senha)
         {
+            
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT USUARIO,SENHA FROM LOGIN  WHERE USUARIO = @USUARIO AND SENHA = @SENHA";
             cmd.Parameters.AddWithValue("@USUARIO", usuario);
