@@ -44,18 +44,33 @@ namespace teste.Telas.Produtos
 
         private void button1_Click(object sender, EventArgs e)
         {
+            PesquisaProdutos RetornaProd = new PesquisaProdutos();
+            labelQtdProdutos.Text = RetornaProd.ConsultProd().Count.ToString();
+            foreach (ProdutosBD produtos in RetornaProd.ConsultProd()) {
 
-            PesquisaProdutos  RetornaProd = new PesquisaProdutos();
-            textBoxIdProduto.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).Idproduto;
-            textBoxIdItem.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).ItemProduto;
-            textBoxDescProduto.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).DescricaoProduto;
-            textBoxLinkSite.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).LinkSite;
-            textBoxDescDetalhada.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).DescricaoDetalhada;
-            textBoxMetaTag.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).MetaTag;
-            textBoxPalavrasSub.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).PalavrasSub;
-            comboBoxSite.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).CodSite;
-            comboBoxCategorias.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).CodCategoria;
-            comboBoxLoja.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).CodLoja;
+                textBoxIdProduto.Text = produtos.Idproduto;
+                textBoxIdItem.Text = produtos.ItemProduto;
+                textBoxDescProduto.Text = produtos.DescricaoProduto;
+                textBoxLinkSite.Text = produtos.LinkSite;
+                textBoxDescDetalhada.Text = produtos.DescricaoDetalhada;
+                textBoxMetaTag.Text = produtos.MetaTag;
+                textBoxPalavrasSub.Text = produtos.PalavrasSub;
+                comboBoxSite.Text = produtos.CodSite;
+                comboBoxLoja.Text = produtos.CodLoja;
+                comboBoxCategorias.Text = produtos.CodCategoria;
+
+            }
+
+
+            //textBoxIdItem.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).ItemProduto;
+            //textBoxDescProduto.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).DescricaoProduto;
+            //textBoxLinkSite.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).LinkSite;
+            //textBoxDescDetalhada.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).DescricaoDetalhada;
+            //textBoxMetaTag.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).MetaTag;
+            //textBoxPalavrasSub.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).PalavrasSub;
+            //comboBoxSite.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).CodSite;
+            //comboBoxCategorias.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).CodCategoria;
+            //comboBoxLoja.Text = RetornaProd.ConsultProd(textBoxIdProduto.Text).CodLoja;
 
 
             //textBoxDescProduto.Text=(TodosProdutos.DescricaoProduto);
@@ -93,6 +108,15 @@ namespace teste.Telas.Produtos
             //    comboBoxLoja.Items.Add(prod["CODLOJA"]); // Teste add itens combo box
             //    comboBoxLoja.Text = Convert.ToString(prod["CODLOJA"]);
             //}
+        }
+
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            PesquisaProdutos RetornaProd = new PesquisaProdutos();
+
+            labelQtdProdutos.Text = RetornaProd.ConsultProd().Count.ToString();
+
         }
     }
 }

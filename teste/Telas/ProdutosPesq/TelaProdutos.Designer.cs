@@ -84,6 +84,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBoxIdItem = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelQtdProdutos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -91,6 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -566,6 +570,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.Controls.Add(this.labelQtdProdutos);
+            this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Location = new System.Drawing.Point(-2, 39);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(799, 24);
@@ -586,6 +592,26 @@
             this.label19.Size = new System.Drawing.Size(36, 13);
             this.label19.TabIndex = 18;
             this.label19.Text = "IdItem";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(498, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // labelQtdProdutos
+            // 
+            this.labelQtdProdutos.AutoSize = true;
+            this.labelQtdProdutos.Location = new System.Drawing.Point(556, 5);
+            this.labelQtdProdutos.Name = "labelQtdProdutos";
+            this.labelQtdProdutos.Size = new System.Drawing.Size(13, 13);
+            this.labelQtdProdutos.TabIndex = 20;
+            this.labelQtdProdutos.Text = "0";
             // 
             // TelaProdutos
             // 
@@ -627,6 +653,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -689,5 +718,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxIdItem;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label labelQtdProdutos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

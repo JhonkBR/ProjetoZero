@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace teste.ProdutosClass
 {
-    public class Produtos
+    public class ProdutosBD
     {
         public string Idproduto { get; set; }
         public string ItemProduto { get; set; }
