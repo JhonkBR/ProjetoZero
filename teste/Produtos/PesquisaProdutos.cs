@@ -10,12 +10,10 @@ namespace teste.ProdutosClass
 {
     public class PesquisaProdutos
     {
-
-
-        public List<ProdutosBD> ConsultProd()
+        public  List<ProdutosBD> ConsultProd()
         {
+            
             List<ProdutosBD> ProductList = new List<ProdutosBD>();
-            ProdutosBD TodosProdutos = new ProdutosBD();
             ConexaoBanco con = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT IDPRODUTO " +
@@ -33,8 +31,9 @@ namespace teste.ProdutosClass
             //cmd.Parameters.AddWithValue("@Idproduto", codProduto);
             cmd.Connection = con.Conectar();
             SqlDataReader prod = cmd.ExecuteReader();
-            while (prod.Read())
+            while (prod.Read() == true)
             {
+                ProdutosBD TodosProdutos = new ProdutosBD();
                 TodosProdutos.Idproduto = prod["IDPRODUTO"].ToString();
                 TodosProdutos.ItemProduto = prod["IDITEM"].ToString();
                 TodosProdutos.LinkSite = prod["LINKSITE"].ToString();
@@ -47,6 +46,7 @@ namespace teste.ProdutosClass
                 TodosProdutos.CodCategoria = prod["CODCATEGORIA"].ToString();
                 TodosProdutos.CodLoja = prod["CODLOJA"].ToString();
                 ProductList.Add(TodosProdutos);
+                
             }
             
              return ProductList;

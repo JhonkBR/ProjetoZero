@@ -43,7 +43,7 @@ namespace teste.Telas.Produtos
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+         {
             PesquisaProdutos RetornaProd = new PesquisaProdutos();
             labelQtdProdutos.Text = RetornaProd.ConsultProd().Count.ToString();
             foreach (ProdutosBD produtos in RetornaProd.ConsultProd()) {
@@ -114,8 +114,12 @@ namespace teste.Telas.Produtos
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             PesquisaProdutos RetornaProd = new PesquisaProdutos();
-
+            ProdutosBD TodosProdutos = new ProdutosBD();
+            List<ProdutosBD> ListTest = new List<ProdutosBD>();
+            ListTest = RetornaProd.ConsultProd();
+            //corrigindo informação de produto na ferramenta
             labelQtdProdutos.Text = RetornaProd.ConsultProd().Count.ToString();
+
 
         }
     }

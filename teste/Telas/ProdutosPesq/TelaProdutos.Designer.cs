@@ -82,10 +82,12 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.labelQtdProdutos = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxIdItem = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelQtdProdutos = new System.Windows.Forms.Label();
+            this.labelProdAtual = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -570,12 +572,34 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.Controls.Add(this.label21);
+            this.panel5.Controls.Add(this.labelProdAtual);
             this.panel5.Controls.Add(this.labelQtdProdutos);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Location = new System.Drawing.Point(-2, 39);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(799, 24);
             this.panel5.TabIndex = 16;
+            // 
+            // labelQtdProdutos
+            // 
+            this.labelQtdProdutos.AutoSize = true;
+            this.labelQtdProdutos.Location = new System.Drawing.Point(578, 5);
+            this.labelQtdProdutos.Name = "labelQtdProdutos";
+            this.labelQtdProdutos.Size = new System.Drawing.Size(13, 13);
+            this.labelQtdProdutos.TabIndex = 20;
+            this.labelQtdProdutos.Text = "0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(498, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // textBoxIdItem
             // 
@@ -593,25 +617,23 @@
             this.label19.TabIndex = 18;
             this.label19.Text = "IdItem";
             // 
-            // pictureBox1
+            // labelProdAtual
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(498, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.labelProdAtual.AutoSize = true;
+            this.labelProdAtual.Location = new System.Drawing.Point(539, 5);
+            this.labelProdAtual.Name = "labelProdAtual";
+            this.labelProdAtual.Size = new System.Drawing.Size(13, 13);
+            this.labelProdAtual.TabIndex = 21;
+            this.labelProdAtual.Text = "0";
             // 
-            // labelQtdProdutos
+            // label21
             // 
-            this.labelQtdProdutos.AutoSize = true;
-            this.labelQtdProdutos.Location = new System.Drawing.Point(556, 5);
-            this.labelQtdProdutos.Name = "labelQtdProdutos";
-            this.labelQtdProdutos.Size = new System.Drawing.Size(13, 13);
-            this.labelQtdProdutos.TabIndex = 20;
-            this.labelQtdProdutos.Text = "0";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(559, 5);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(12, 13);
+            this.label21.TabIndex = 22;
+            this.label21.Text = "/";
             // 
             // TelaProdutos
             // 
@@ -720,5 +742,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label labelQtdProdutos;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label labelProdAtual;
     }
 }
