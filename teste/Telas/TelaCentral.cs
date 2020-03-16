@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using teste.Telas.Produtos;
+using teste.Telas;
 
 namespace teste.Telas
 {
@@ -92,6 +93,14 @@ namespace teste.Telas
             ReleaseCapture();//Aqui eu defino se o form é movido pelo usuário
             //digo no caso a tela
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_VoltarLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 telaLogin = new Form1();
+            telaLogin.Show();
+
         }
     }
 }

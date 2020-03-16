@@ -65,9 +65,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 124);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 41);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(213, 112);
+            this.pictureBox3.Size = new System.Drawing.Size(213, 258);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -108,11 +108,11 @@
             // 
             this.textUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.textUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.textUsuario.Location = new System.Drawing.Point(281, 76);
             this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(401, 20);
+            this.textUsuario.Size = new System.Drawing.Size(401, 19);
             this.textUsuario.TabIndex = 0;
             this.textUsuario.Text = "USUARIO";
             this.textUsuario.TextChanged += new System.EventHandler(this.textUsuario_TextChanged);
@@ -123,11 +123,11 @@
             // 
             this.textSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.textSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSenha.ForeColor = System.Drawing.Color.DimGray;
             this.textSenha.Location = new System.Drawing.Point(281, 182);
             this.textSenha.Name = "textSenha";
-            this.textSenha.Size = new System.Drawing.Size(401, 20);
+            this.textSenha.Size = new System.Drawing.Size(401, 19);
             this.textSenha.TabIndex = 0;
             this.textSenha.Text = "SENHA";
             this.textSenha.TextChanged += new System.EventHandler(this.textSenha_TextChanged);
@@ -137,11 +137,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(442, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 33);
+            this.label1.Size = new System.Drawing.Size(99, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "LOGIN";
             // 
@@ -164,11 +164,11 @@
             // linkLabelRecupSenha
             // 
             this.linkLabelRecupSenha.AutoSize = true;
-            this.linkLabelRecupSenha.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRecupSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRecupSenha.LinkColor = System.Drawing.Color.DarkGray;
             this.linkLabelRecupSenha.Location = new System.Drawing.Point(445, 324);
             this.linkLabelRecupSenha.Name = "linkLabelRecupSenha";
-            this.linkLabelRecupSenha.Size = new System.Drawing.Size(117, 17);
+            this.linkLabelRecupSenha.Size = new System.Drawing.Size(111, 15);
             this.linkLabelRecupSenha.TabIndex = 0;
             this.linkLabelRecupSenha.TabStop = true;
             this.linkLabelRecupSenha.Text = "Recuperar senha...";

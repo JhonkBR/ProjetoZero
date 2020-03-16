@@ -47,11 +47,11 @@
             // labelTexto
             // 
             this.labelTexto.AutoSize = true;
-            this.labelTexto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTexto.ForeColor = System.Drawing.Color.DimGray;
             this.labelTexto.Location = new System.Drawing.Point(147, 140);
             this.labelTexto.Name = "labelTexto";
-            this.labelTexto.Size = new System.Drawing.Size(121, 21);
+            this.labelTexto.Size = new System.Drawing.Size(118, 20);
             this.labelTexto.TabIndex = 15;
             this.labelTexto.Text = "NOVA SENHA:";
             this.labelTexto.Click += new System.EventHandler(this.labelTexto_Click);
@@ -91,22 +91,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(42, 182);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 21);
+            this.label1.Size = new System.Drawing.Size(219, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "CONFIRMAÇÃO DE SENHA:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(162, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(315, 30);
+            this.label2.Size = new System.Drawing.Size(322, 29);
             this.label2.TabIndex = 18;
             this.label2.Text = "RECUPERAÇÃO DE SENHA";
             // 
@@ -146,28 +146,29 @@
             // 
             this.TextBoxNewSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.TextBoxNewSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxNewSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxNewSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxNewSenha.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxNewSenha.Location = new System.Drawing.Point(275, 136);
             this.TextBoxNewSenha.Name = "TextBoxNewSenha";
             this.TextBoxNewSenha.PasswordChar = '*';
-            this.TextBoxNewSenha.Size = new System.Drawing.Size(263, 20);
+            this.TextBoxNewSenha.Size = new System.Drawing.Size(263, 19);
             this.TextBoxNewSenha.TabIndex = 21;
             // 
             // TextBoxConfirmNewSenha
             // 
             this.TextBoxConfirmNewSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.TextBoxConfirmNewSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxConfirmNewSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxConfirmNewSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxConfirmNewSenha.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxConfirmNewSenha.Location = new System.Drawing.Point(274, 178);
             this.TextBoxConfirmNewSenha.Name = "TextBoxConfirmNewSenha";
             this.TextBoxConfirmNewSenha.PasswordChar = '*';
-            this.TextBoxConfirmNewSenha.Size = new System.Drawing.Size(264, 20);
+            this.TextBoxConfirmNewSenha.Size = new System.Drawing.Size(264, 19);
             this.TextBoxConfirmNewSenha.TabIndex = 22;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(611, 12);
             this.pictureBox1.Name = "pictureBox1";

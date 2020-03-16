@@ -130,7 +130,8 @@ namespace teste
 
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
-
+            
+            
             RetornaBanco pesq = new RetornaBanco();
             pesq.Possui(textUsuario.Text, textSenha.Text);
             //fiz um comando comum para para mostrar o acesso e finalizar

@@ -42,6 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxPalavrasSub = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonLimpar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxEstoque = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -82,12 +83,13 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.labelProdAtual = new System.Windows.Forms.Label();
             this.labelQtdProdutos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxIdItem = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.labelProdAtual = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -97,6 +99,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -201,6 +204,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.buttonLimpar);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBoxEstoque);
             this.panel1.Controls.Add(this.label16);
@@ -219,6 +223,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(770, 174);
             this.panel1.TabIndex = 12;
+            // 
+            // buttonLimpar
+            // 
+            this.buttonLimpar.Location = new System.Drawing.Point(670, 82);
+            this.buttonLimpar.Name = "buttonLimpar";
+            this.buttonLimpar.Size = new System.Drawing.Size(85, 34);
+            this.buttonLimpar.TabIndex = 14;
+            this.buttonLimpar.Text = "Limpar";
+            this.buttonLimpar.UseVisualStyleBackColor = true;
+            this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
             // 
             // button1
             // 
@@ -451,17 +465,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(345, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 23);
+            this.label9.Size = new System.Drawing.Size(93, 24);
             this.label9.TabIndex = 21;
             this.label9.Text = "Produtos";
             // 
             // btnEncerrar
             // 
-            this.btnEncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEncerrar.Image")));
             this.btnEncerrar.Location = new System.Drawing.Point(764, 7);
             this.btnEncerrar.Name = "btnEncerrar";
             this.btnEncerrar.Size = new System.Drawing.Size(20, 20);
@@ -471,7 +484,6 @@
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
             this.btnMinimizar.Location = new System.Drawing.Point(734, 9);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(24, 18);
@@ -572,6 +584,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Controls.Add(this.label21);
             this.panel5.Controls.Add(this.labelProdAtual);
             this.panel5.Controls.Add(this.labelQtdProdutos);
@@ -580,6 +593,24 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(799, 24);
             this.panel5.TabIndex = 16;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(559, 5);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(12, 13);
+            this.label21.TabIndex = 22;
+            this.label21.Text = "/";
+            // 
+            // labelProdAtual
+            // 
+            this.labelProdAtual.AutoSize = true;
+            this.labelProdAtual.Location = new System.Drawing.Point(539, 5);
+            this.labelProdAtual.Name = "labelProdAtual";
+            this.labelProdAtual.Size = new System.Drawing.Size(13, 13);
+            this.labelProdAtual.TabIndex = 21;
+            this.labelProdAtual.Text = "0";
             // 
             // labelQtdProdutos
             // 
@@ -617,23 +648,15 @@
             this.label19.TabIndex = 18;
             this.label19.Text = "IdItem";
             // 
-            // labelProdAtual
+            // pictureBox2
             // 
-            this.labelProdAtual.AutoSize = true;
-            this.labelProdAtual.Location = new System.Drawing.Point(539, 5);
-            this.labelProdAtual.Name = "labelProdAtual";
-            this.labelProdAtual.Size = new System.Drawing.Size(13, 13);
-            this.labelProdAtual.TabIndex = 21;
-            this.labelProdAtual.Text = "0";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(559, 5);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(12, 13);
-            this.label21.TabIndex = 22;
-            this.label21.Text = "/";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(442, -8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
             // TelaProdutos
             // 
@@ -678,6 +701,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,5 +768,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label labelProdAtual;
+        private System.Windows.Forms.Button buttonLimpar;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
