@@ -102,5 +102,16 @@ namespace teste.Telas
             telaLogin.Show();
 
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            TelaEndereco FrontEnd = new TelaEndereco();
+            FrontEnd.Show();
+        }
     }
 }

@@ -18,7 +18,10 @@ namespace teste.Busca_Correios
 
         [JsonProperty("complemento")]
         public string Complemento { get; set; }
-
+        
+        [JsonProperty("bairro")]
+        public string Bairro { get; set; }
+        
         [JsonProperty("localidade")]
         public string Localidade { get; set; }
 
