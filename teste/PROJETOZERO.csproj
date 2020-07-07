@@ -117,8 +117,14 @@
     <Compile Include="DAO\ManipulaBanco_Login.cs" />
     <Compile Include="DAO\RetornaBanco.cs" />
     <Compile Include="DAO\SalvarCredenciaisServi.cs" />
+    <Compile Include="Produtos\CadastraProduto.cs" />
     <Compile Include="Produtos\PesquisaProdutos.cs" />
     <Compile Include="Produtos\ProdutosBD.cs" />
+    <Compile Include="ProMAilDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProMAilDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Telas\ProdutosPesq\TelaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,17 @@
       <DependentUpon>TelaRecuperarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="ProMAilDataSet.xsc">
+      <DependentUpon>ProMAilDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProMAilDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProMAilDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProMAilDataSet.xss">
+      <DependentUpon>ProMAilDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

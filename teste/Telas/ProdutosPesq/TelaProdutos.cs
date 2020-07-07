@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using teste.DAO;
+using teste.Produtos;
 using teste.ProdutosClass;
 
 namespace teste.Telas.Produtos
@@ -46,49 +47,6 @@ namespace teste.Telas.Produtos
         private void button1_Click(object sender, EventArgs e)
          {
 
-            if (textBoxIdProduto.Text =="")
-            {
-                int qtdeProd;
-                PesquisaProdutos RetornaProd = new PesquisaProdutos();
-                qtdeProd = RetornaProd.ConsultProd().Count();
-                labelQtdProdutos.Text = (qtdeProd - 1).ToString();
-                foreach (ProdutosBD produtos in RetornaProd.ConsultProd())
-                {
-                    labelProdAtual.Text = "1";
-                    index = 1;
-
-                    textBoxIdProduto.Text = produtos.Idproduto;
-                    textBoxIdItem.Text = produtos.ItemProduto;
-                    textBoxDescProduto.Text = produtos.DescricaoProduto;
-                    textBoxLinkSite.Text = produtos.LinkSite;
-                    textBoxDescDetalhada.Text = produtos.DescricaoDetalhada;
-                    textBoxMetaTag.Text = produtos.MetaTag;
-                    textBoxPalavrasSub.Text = produtos.PalavrasSub;
-                    comboBoxSite.Text = produtos.CodSite;
-                    comboBoxLoja.Text = produtos.CodLoja;
-                    comboBoxCategorias.Text = produtos.CodCategoria;
-                }
-            }
-
-            else
-            {
-
-                PesquisaProdutos RetornaProd1 = new PesquisaProdutos();
-                labelQtdProdutos.Text = RetornaProd1.ConsultaProduto(textBoxIdProduto.Text).Count.ToString();
-                foreach (ProdutosBD produtos in RetornaProd1.ConsultaProduto(textBoxIdProduto.Text))
-                {
-                    textBoxIdProduto.Text = produtos.Idproduto;
-                    textBoxIdItem.Text = produtos.ItemProduto;
-                    textBoxDescProduto.Text = produtos.DescricaoProduto;
-                    textBoxLinkSite.Text = produtos.LinkSite;
-                    textBoxDescDetalhada.Text = produtos.DescricaoDetalhada;
-                    textBoxMetaTag.Text = produtos.MetaTag;
-                    textBoxPalavrasSub.Text = produtos.PalavrasSub;
-                    comboBoxSite.Text = produtos.CodSite;
-                    comboBoxLoja.Text = produtos.CodLoja;
-                    comboBoxCategorias.Text = produtos.CodCategoria;
-                }
-            }
             
         }
 
@@ -110,12 +68,7 @@ namespace teste.Telas.Produtos
                 textBoxIdProduto.Text = ListTest[index].Idproduto;
                 textBoxIdItem.Text = ListTest[index].ItemProduto;
                 textBoxDescProduto.Text = ListTest[index].DescricaoProduto;
-                textBoxLinkSite.Text = ListTest[index].LinkSite;
                 textBoxDescDetalhada.Text = ListTest[index].DescricaoDetalhada;
-                textBoxMetaTag.Text = ListTest[index].MetaTag;
-                textBoxPalavrasSub.Text = ListTest[index].PalavrasSub;
-                comboBoxSite.Text = ListTest[index].CodSite;
-                comboBoxLoja.Text = ListTest[index].CodLoja;
                 comboBoxCategorias.Text = ListTest[index].CodCategoria;
                 labelProdAtual.Text = Convert.ToString(index);
 
@@ -130,15 +83,106 @@ namespace teste.Telas.Produtos
             textBoxIdProduto.Text = "";
             textBoxIdItem.Text =  "";
             textBoxDescProduto.Text =  "";
-            textBoxLinkSite.Text = "";
             textBoxDescDetalhada.Text = "";
-            textBoxMetaTag.Text = "";
-            textBoxPalavrasSub.Text = "";
-            comboBoxSite.Text = "";
-            comboBoxLoja.Text = "";
             comboBoxCategorias.Text = "";
             index = 0;
 
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLargura_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TelaProdutos_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void comboBoxCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+            if (textBoxIdProduto.Text == "")
+            {
+                int qtdeProd;
+                PesquisaProdutos RetornaProd = new PesquisaProdutos();
+                qtdeProd = RetornaProd.ConsultProd().Count();
+                labelQtdProdutos.Text = (qtdeProd - 1).ToString();
+                foreach (ProdutosBD produtos in RetornaProd.ConsultProd())
+                {
+                    labelProdAtual.Text = "1";
+                    index = 1;
+
+                    textBoxIdProduto.Text = produtos.Idproduto;
+                    textBoxIdItem.Text = produtos.ItemProduto;
+                    textBoxDescProduto.Text = produtos.DescricaoProduto;
+                    textBoxDescDetalhada.Text = produtos.DescricaoDetalhada;
+                    comboBoxCategorias.Text = produtos.CodCategoria;
+                }
+            }
+
+            else
+            {
+
+                PesquisaProdutos RetornaProd1 = new PesquisaProdutos();
+                labelQtdProdutos.Text = RetornaProd1.ConsultaProduto(textBoxIdProduto.Text).Count.ToString();
+                foreach (ProdutosBD produtos in RetornaProd1.ConsultaProduto(textBoxIdProduto.Text))
+                {
+                    textBoxIdProduto.Text = produtos.Idproduto;
+                    textBoxIdItem.Text = produtos.ItemProduto;
+                    textBoxDescProduto.Text = produtos.DescricaoProduto;
+                    textBoxDescDetalhada.Text = produtos.DescricaoDetalhada;
+                    comboBoxCategorias.Text = produtos.CodCategoria;
+                }
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AtualizaProduto AtualizadaProd = new AtualizaProduto();
+            //SqlException exception;
+            try 
+            {
+                AtualizadaProd.AtualizarProd(textBoxIdProduto.Text, textBoxIdItem.Text, textBoxDescDetalhada.Text, textBoxDescProduto.Text, comboBoxCategorias.Text);
+                MessageBox.Show("Produto Atualizado");
+            }
+
+            catch
+            {
+                MessageBox.Show("Erro ao atualizar"+e);
+            }
+        }
+
+        private void pictureBox2_DoubleClick(object sender, EventArgs e)
+        {
+            AtualizaProduto AtualizadaProd = new AtualizaProduto();
+            //SqlException exception;
+            try
+            {
+                AtualizadaProd.AtualizarProd(textBoxIdProduto.Text, textBoxIdItem.Text, textBoxDescDetalhada.Text, textBoxDescProduto.Text, comboBoxCategorias.Text);
+                MessageBox.Show("Erro ao atualizar");
+            }
+
+            catch
+            {
+                MessageBox.Show("Erro ao atualizar" + e);
+            }
         }
     }
 }
