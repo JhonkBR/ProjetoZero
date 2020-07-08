@@ -16,73 +16,96 @@ namespace teste.ProdutosClass
             List<ProdutosBD> ProductList = new List<ProdutosBD>();
             ConexaoBanco con = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT IDPRODUTO " +
-            " ,IDITEM" +
-            " ,DESCRICAOPRODUTO" +
-            " ,LINKSITE" +
-            " ,DESCRICAODETALHADA" +
-            " ,METATAG" +
-            " ,PALAVRASSUB" +
-            " ,CODSITE" +
-            " ,CODCATEGORIA" +
-            " ,CODLOJA" +
-            " FROM [dbo].[TPRODUTO]";
-            //" WHERE IDPRODUTO = @Idproduto";
-            //cmd.Parameters.AddWithValue("@Idproduto", codProduto);
+            cmd.CommandText = "USE ProMAil "+
+            "SELECT Referencia"+
+                 ",IdItem"+
+                 ",DescricaoProduto"+
+                 ",DescricaoDetalhada"+
+                 ",CodigoLoja"+
+                 ",CodigoCategoria"+
+                 ",Peso"+
+                 ",Altura"+
+                 ",Largura"+
+                 ",Comprimento"+
+                 ",Estoque"+
+                 ",Preco"+
+                 ",PrecoPromocional"+
+                 ",Modelo" +
+                 ",Marca" +
+                 ",CodigoBarras " +
+              "FROM dbo.Produtos ";
             cmd.Connection = con.Conectar();
             SqlDataReader prod = cmd.ExecuteReader();
             while (prod.Read() == true)
             {
-
-                ProdutosBD TodosProdutos = new ProdutosBD();
-                TodosProdutos.Idproduto = prod["IDPRODUTO"].ToString();
-                TodosProdutos.ItemProduto = prod["IDITEM"].ToString();
-                TodosProdutos.LinkSite = prod["LINKSITE"].ToString();
-                TodosProdutos.DescricaoDetalhada = prod["DESCRICAODETALHADA"].ToString();
-                TodosProdutos.MetaTag = prod["METATAG"].ToString();
-                TodosProdutos.ItemProduto = prod["IDITEM"].ToString();
-                TodosProdutos.DescricaoProduto = prod["DESCRICAOPRODUTO"].ToString();
-                TodosProdutos.PalavrasSub = prod["PALAVRASSUB"].ToString();
-                TodosProdutos.CodSite = prod["CODSITE"].ToString();
-                TodosProdutos.CodCategoria = prod["CODCATEGORIA"].ToString();
-                TodosProdutos.CodLoja = prod["CODLOJA"].ToString();
-                ProductList.Add(TodosProdutos);
-                
+                ProdutosBD Produtos = new ProdutosBD();
+                Produtos.Referencia = prod["Referencia"].ToString();
+                Produtos.IdItem = prod["IdItem"].ToString();
+                Produtos.DescricaoProduto = prod["DescricaoProduto"].ToString();
+                Produtos.DescricaoDetalhada = prod["DescricaoDetalhada"].ToString();
+                Produtos.CodLoja = Convert.ToInt32(prod["CodigoLoja"].ToString());
+                Produtos.CodCategoria = Convert.ToInt32(prod["CodigoCategoria"].ToString());
+                Produtos.Peso = Convert.ToInt32 (prod["Peso"].ToString());
+                Produtos.Altura = Convert.ToInt32(prod["Altura"].ToString());
+                Produtos.Largura = Convert.ToInt32(prod["Largura"].ToString());
+                Produtos.Comprimento = Convert.ToInt32(prod["Comprimento"].ToString());
+                Produtos.Preco = Convert.ToInt32(prod["Preco"].ToString());
+                Produtos.PrecoPromocional = Convert.ToInt32(prod["PrecoPromocional"].ToString());
+                Produtos.Modelo = prod["Modelo"].ToString();
+                Produtos.Marca = prod["Marca"].ToString();
+                Produtos.CodigoBarras = prod["CodigoBarras"].ToString();
+                ProductList.Add(Produtos);   
             }
              return ProductList;
         }
 
 
-        public List<ProdutosBD> ConsultaProduto(string idproduto) {
-            // Consulta de produtos por idproduto, para buscar produto específico.
+        public List<ProdutosBD> ConsultaProduto(string Referencia) {
+            // Pesquisa Produto específico
             List<ProdutosBD> ProductList = new List<ProdutosBD>();
             ConexaoBanco con = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "SELECT IDPRODUTO, IDITEM,DESCRICAOPRODUTO, LINKSITE, " +
-                "DESCRICAODETALHADA,METATAG, PALAVRASSUB, CODSITE,CODCATEGORIA, CODLOJA " +
-                "FROM TPRODUTO WHERE IDPRODUTO = @IDPRODUTO";
-            cmd.Parameters.AddWithValue("@IDPRODUTO", idproduto);
+            cmd.CommandText = "USE ProMAil " +
+             "SELECT Referencia" +
+                  ",IdItem" +
+                  ",DescricaoProduto" +
+                  ",DescricaoDetalhada" +
+                  ",CodigoLoja" +
+                  ",CodigoCategoria" +
+                  ",Peso" +
+                  ",Altura" +
+                  ",Largura" +
+                  ",Comprimento" +
+                  ",Estoque" +
+                  ",Preco" +
+                  ",PrecoPromocional" +
+                  ",Modelo" +
+                  ",Marca" +
+                  ",CodigoBarras " +
+               "FROM dbo.Produtos WHERE Referencia = @referencia";
+            cmd.Parameters.AddWithValue("@referencia", Referencia);
             cmd.Connection = con.Conectar();
             SqlDataReader prod = cmd.ExecuteReader();
             while (prod.Read() == true)
             {
-                ProdutosBD TodosProdutos = new ProdutosBD();
-                TodosProdutos.Idproduto = prod["IDPRODUTO"].ToString();
-                TodosProdutos.ItemProduto = prod["IDITEM"].ToString();
-                TodosProdutos.LinkSite = prod["LINKSITE"].ToString();
-                TodosProdutos.DescricaoDetalhada = prod["DESCRICAODETALHADA"].ToString();
-                TodosProdutos.MetaTag = prod["METATAG"].ToString();
-                TodosProdutos.ItemProduto = prod["IDITEM"].ToString();
-                TodosProdutos.DescricaoProduto = prod["DESCRICAOPRODUTO"].ToString();
-                TodosProdutos.PalavrasSub = prod["PALAVRASSUB"].ToString();
-                TodosProdutos.CodSite = prod["CODSITE"].ToString();
-                TodosProdutos.CodCategoria = prod["CODCATEGORIA"].ToString();
-                TodosProdutos.CodLoja = prod["CODLOJA"].ToString();
-                ProductList.Add(TodosProdutos);
-
+                ProdutosBD Produtos = new ProdutosBD();
+                Produtos.Referencia = prod["Referencia"].ToString();
+                Produtos.IdItem = prod["IdItem"].ToString();
+                Produtos.DescricaoProduto = prod["DescricaoProduto"].ToString();
+                Produtos.DescricaoDetalhada = prod["DescricaoDetalhada"].ToString();
+                Produtos.CodLoja = Convert.ToInt32(prod["CodigoLoja"].ToString());
+                Produtos.CodCategoria = Convert.ToInt32(prod["CodigoCategoria"].ToString());
+                Produtos.Peso = Convert.ToInt32(prod["Peso"].ToString());
+                Produtos.Altura = Convert.ToInt32(prod["Altura"].ToString());
+                Produtos.Largura = Convert.ToInt32(prod["Largura"].ToString());
+                Produtos.Comprimento = Convert.ToInt32(prod["Comprimento"].ToString());
+                Produtos.Preco = Convert.ToInt32(prod["Preco"].ToString());
+                Produtos.PrecoPromocional = Convert.ToInt32(prod["PrecoPromocional"].ToString());
+                Produtos.Modelo = prod["Modelo"].ToString();
+                Produtos.Marca = prod["Marca"].ToString();
+                Produtos.CodigoBarras = prod["CodigoBarras"].ToString();
+                ProductList.Add(Produtos);
             }
-
-
             return ProductList;
         }
 

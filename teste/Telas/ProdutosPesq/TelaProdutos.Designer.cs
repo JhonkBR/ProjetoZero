@@ -30,14 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaProdutos));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxIdProduto = new System.Windows.Forms.TextBox();
+            this.textBoxReferencia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxDescProduto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxDescDetalhada = new System.Windows.Forms.TextBox();
-            this.buttonLimpar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPrecoPromotion = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxCodBarras = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox_Marca = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxPreço = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxEstoque = new System.Windows.Forms.TextBox();
             this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,6 +58,10 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape13 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape11 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -59,29 +70,42 @@
             this.btnEncerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.labelProdAtual = new System.Windows.Forms.Label();
             this.labelQtdProdutos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSalvar = new System.Windows.Forms.PictureBox();
             this.textBoxIdItem = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_Edit = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNovoProduto = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEditar = new System.Windows.Forms.PictureBox();
+            this.pictureBoxClean = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPesquisa = new System.Windows.Forms.PictureBox();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxCodigoLoja = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxModelo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape14 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape12 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSalvar)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNovoProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClean)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,22 +115,22 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(26, 22);
+            this.label1.Location = new System.Drawing.Point(7, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Código";
+            this.label1.Text = "Referencia:";
             // 
-            // textBoxIdProduto
+            // textBoxReferencia
             // 
-            this.textBoxIdProduto.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxIdProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxIdProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxIdProduto.Location = new System.Drawing.Point(15, 45);
-            this.textBoxIdProduto.Name = "textBoxIdProduto";
-            this.textBoxIdProduto.Size = new System.Drawing.Size(83, 19);
-            this.textBoxIdProduto.TabIndex = 1;
-            this.textBoxIdProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxReferencia.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxReferencia.Location = new System.Drawing.Point(15, 45);
+            this.textBoxReferencia.Name = "textBoxReferencia";
+            this.textBoxReferencia.Size = new System.Drawing.Size(83, 19);
+            this.textBoxReferencia.TabIndex = 1;
+            this.textBoxReferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -144,26 +168,24 @@
             // textBoxDescDetalhada
             // 
             this.textBoxDescDetalhada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxDescDetalhada.Location = new System.Drawing.Point(21, 209);
+            this.textBoxDescDetalhada.Location = new System.Drawing.Point(15, 213);
             this.textBoxDescDetalhada.Multiline = true;
             this.textBoxDescDetalhada.Name = "textBoxDescDetalhada";
             this.textBoxDescDetalhada.Size = new System.Drawing.Size(432, 189);
             this.textBoxDescDetalhada.TabIndex = 7;
             // 
-            // buttonLimpar
-            // 
-            this.buttonLimpar.Location = new System.Drawing.Point(10, 326);
-            this.buttonLimpar.Name = "buttonLimpar";
-            this.buttonLimpar.Size = new System.Drawing.Size(85, 34);
-            this.buttonLimpar.TabIndex = 14;
-            this.buttonLimpar.Text = "Limpar";
-            this.buttonLimpar.UseVisualStyleBackColor = true;
-            this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBoxPrecoPromotion);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.textBoxCodBarras);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.textBox_Marca);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.textBoxPreço);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.textBoxEstoque);
             this.panel2.Controls.Add(this.comboBoxCategorias);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label8);
@@ -182,17 +204,107 @@
             this.panel2.Size = new System.Drawing.Size(349, 427);
             this.panel2.TabIndex = 13;
             // 
-            // textBox1
+            // textBoxPrecoPromotion
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(30, 294);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 19);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPrecoPromotion.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxPrecoPromotion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPrecoPromotion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxPrecoPromotion.Location = new System.Drawing.Point(215, 377);
+            this.textBoxPrecoPromotion.Name = "textBoxPrecoPromotion";
+            this.textBoxPrecoPromotion.Size = new System.Drawing.Size(83, 19);
+            this.textBoxPrecoPromotion.TabIndex = 28;
+            this.textBoxPrecoPromotion.Text = "0";
+            this.textBoxPrecoPromotion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(192, 354);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(141, 20);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Preco Promocional";
+            // 
+            // textBoxCodBarras
+            // 
+            this.textBoxCodBarras.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxCodBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCodBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxCodBarras.Location = new System.Drawing.Point(16, 377);
+            this.textBoxCodBarras.Name = "textBoxCodBarras";
+            this.textBoxCodBarras.Size = new System.Drawing.Size(144, 19);
+            this.textBoxCodBarras.TabIndex = 26;
+            this.textBoxCodBarras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(12, 354);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(136, 20);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Código de Barras:";
+            // 
+            // textBox_Marca
+            // 
+            this.textBox_Marca.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox_Marca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox_Marca.Location = new System.Drawing.Point(89, 65);
+            this.textBox_Marca.Name = "textBox_Marca";
+            this.textBox_Marca.Size = new System.Drawing.Size(83, 19);
+            this.textBox_Marca.TabIndex = 24;
+            this.textBox_Marca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(26, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 20);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Marca:";
+            // 
+            // textBoxPreço
+            // 
+            this.textBoxPreço.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxPreço.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPreço.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxPreço.Location = new System.Drawing.Point(172, 294);
+            this.textBoxPreço.Name = "textBoxPreço";
+            this.textBoxPreço.Size = new System.Drawing.Size(83, 19);
+            this.textBoxPreço.TabIndex = 22;
+            this.textBoxPreço.Text = "0";
+            this.textBoxPreço.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(192, 271);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Preço: ";
+            // 
+            // textBoxEstoque
+            // 
+            this.textBoxEstoque.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxEstoque.Location = new System.Drawing.Point(30, 294);
+            this.textBoxEstoque.Name = "textBoxEstoque";
+            this.textBoxEstoque.Size = new System.Drawing.Size(83, 19);
+            this.textBoxEstoque.TabIndex = 19;
+            this.textBoxEstoque.Text = "0";
+            this.textBoxEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxCategorias
             // 
@@ -202,7 +314,6 @@
             this.comboBoxCategorias.Name = "comboBoxCategorias";
             this.comboBoxCategorias.Size = new System.Drawing.Size(121, 21);
             this.comboBoxCategorias.TabIndex = 4;
-            this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -249,7 +360,6 @@
             this.textBoxLargura.TabIndex = 16;
             this.textBoxLargura.Text = "0";
             this.textBoxLargura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxLargura.TextChanged += new System.EventHandler(this.textBoxLargura_TextChanged);
             // 
             // label22
             // 
@@ -329,7 +439,6 @@
             this.label25.Size = new System.Drawing.Size(45, 20);
             this.label25.TabIndex = 12;
             this.label25.Text = "Peso";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // shapeContainer1
             // 
@@ -337,6 +446,10 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape13,
+            this.lineShape11,
+            this.lineShape10,
+            this.lineShape9,
             this.lineShape8,
             this.lineShape7,
             this.lineShape6,
@@ -345,6 +458,46 @@
             this.shapeContainer1.Size = new System.Drawing.Size(345, 423);
             this.shapeContainer1.TabIndex = 20;
             this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape13
+            // 
+            this.lineShape13.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape13.Enabled = false;
+            this.lineShape13.Name = "lineShape13";
+            this.lineShape13.X1 = 328;
+            this.lineShape13.X2 = 200;
+            this.lineShape13.Y1 = 398;
+            this.lineShape13.Y2 = 399;
+            // 
+            // lineShape11
+            // 
+            this.lineShape11.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape11.Enabled = false;
+            this.lineShape11.Name = "lineShape11";
+            this.lineShape11.X1 = 177;
+            this.lineShape11.X2 = 15;
+            this.lineShape11.Y1 = 396;
+            this.lineShape11.Y2 = 398;
+            // 
+            // lineShape10
+            // 
+            this.lineShape10.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape10.Enabled = false;
+            this.lineShape10.Name = "lineShape10";
+            this.lineShape10.X1 = 181;
+            this.lineShape10.X2 = 95;
+            this.lineShape10.Y1 = 88;
+            this.lineShape10.Y2 = 88;
+            // 
+            // lineShape9
+            // 
+            this.lineShape9.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape9.Enabled = false;
+            this.lineShape9.Name = "lineShape9";
+            this.lineShape9.X1 = 260;
+            this.lineShape9.X2 = 174;
+            this.lineShape9.Y1 = 318;
+            this.lineShape9.Y2 = 318;
             // 
             // lineShape8
             // 
@@ -421,6 +574,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Controls.Add(this.label21);
             this.panel5.Controls.Add(this.labelProdAtual);
             this.panel5.Controls.Add(this.labelQtdProdutos);
@@ -429,6 +583,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(903, 24);
             this.panel5.TabIndex = 16;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(457, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 23;
+            this.pictureBox4.TabStop = false;
             // 
             // label21
             // 
@@ -460,7 +624,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(572, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(572, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 21);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -468,17 +632,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // pictureBox2
+            // pictureBoxSalvar
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 177);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.DoubleClick += new System.EventHandler(this.pictureBox2_DoubleClick);
+            this.pictureBoxSalvar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSalvar.Image")));
+            this.pictureBoxSalvar.Location = new System.Drawing.Point(25, 326);
+            this.pictureBoxSalvar.Name = "pictureBoxSalvar";
+            this.pictureBoxSalvar.Size = new System.Drawing.Size(52, 58);
+            this.pictureBoxSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSalvar.TabIndex = 23;
+            this.pictureBoxSalvar.TabStop = false;
+            this.pictureBoxSalvar.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // textBoxIdItem
             // 
@@ -501,42 +664,65 @@
             this.label19.Size = new System.Drawing.Size(30, 20);
             this.label19.TabIndex = 18;
             this.label19.Text = "ID:";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button_Edit);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBoxNovoProduto);
+            this.panel1.Controls.Add(this.pictureBoxEditar);
+            this.panel1.Controls.Add(this.pictureBoxClean);
+            this.panel1.Controls.Add(this.pictureBoxPesquisa);
+            this.panel1.Controls.Add(this.pictureBoxSalvar);
             this.panel1.Controls.Add(this.btnMinimizar);
-            this.panel1.Controls.Add(this.buttonLimpar);
             this.panel1.Controls.Add(this.btnEncerrar);
             this.panel1.Location = new System.Drawing.Point(886, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(108, 461);
             this.panel1.TabIndex = 19;
             // 
-            // button_Edit
+            // pictureBoxNovoProduto
             // 
-            this.button_Edit.Location = new System.Drawing.Point(10, 268);
-            this.button_Edit.Name = "button_Edit";
-            this.button_Edit.Size = new System.Drawing.Size(85, 34);
-            this.button_Edit.TabIndex = 25;
-            this.button_Edit.Text = "Editar";
-            this.button_Edit.UseVisualStyleBackColor = true;
+            this.pictureBoxNovoProduto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNovoProduto.Image")));
+            this.pictureBoxNovoProduto.Location = new System.Drawing.Point(25, 257);
+            this.pictureBoxNovoProduto.Name = "pictureBoxNovoProduto";
+            this.pictureBoxNovoProduto.Size = new System.Drawing.Size(52, 50);
+            this.pictureBoxNovoProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNovoProduto.TabIndex = 28;
+            this.pictureBoxNovoProduto.TabStop = false;
+            this.pictureBoxNovoProduto.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox3
+            // pictureBoxEditar
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 97);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(85, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBoxEditar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEditar.Image")));
+            this.pictureBoxEditar.Location = new System.Drawing.Point(25, 186);
+            this.pictureBoxEditar.Name = "pictureBoxEditar";
+            this.pictureBoxEditar.Size = new System.Drawing.Size(52, 50);
+            this.pictureBoxEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxEditar.TabIndex = 27;
+            this.pictureBoxEditar.TabStop = false;
+            // 
+            // pictureBoxClean
+            // 
+            this.pictureBoxClean.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClean.Image")));
+            this.pictureBoxClean.Location = new System.Drawing.Point(25, 119);
+            this.pictureBoxClean.Name = "pictureBoxClean";
+            this.pictureBoxClean.Size = new System.Drawing.Size(52, 50);
+            this.pictureBoxClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxClean.TabIndex = 26;
+            this.pictureBoxClean.TabStop = false;
+            this.pictureBoxClean.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBoxPesquisa
+            // 
+            this.pictureBoxPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPesquisa.Image")));
+            this.pictureBoxPesquisa.Location = new System.Drawing.Point(25, 54);
+            this.pictureBoxPesquisa.Name = "pictureBoxPesquisa";
+            this.pictureBoxPesquisa.Size = new System.Drawing.Size(52, 45);
+            this.pictureBoxPesquisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPesquisa.TabIndex = 24;
+            this.pictureBoxPesquisa.TabStop = false;
+            this.pictureBoxPesquisa.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // lineShape2
             // 
@@ -571,13 +757,17 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.textBoxCodigoLoja);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.textBoxModelo);
+            this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.textBoxDescProduto);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.textBoxDescDetalhada);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.textBoxIdProduto);
+            this.panel3.Controls.Add(this.textBoxReferencia);
             this.panel3.Controls.Add(this.textBoxIdItem);
             this.panel3.Controls.Add(this.shapeContainer2);
             this.panel3.Location = new System.Drawing.Point(3, 30);
@@ -585,12 +775,58 @@
             this.panel3.Size = new System.Drawing.Size(522, 428);
             this.panel3.TabIndex = 21;
             // 
+            // textBoxCodigoLoja
+            // 
+            this.textBoxCodigoLoja.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxCodigoLoja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCodigoLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxCodigoLoja.Location = new System.Drawing.Point(399, 53);
+            this.textBoxCodigoLoja.Name = "textBoxCodigoLoja";
+            this.textBoxCodigoLoja.Size = new System.Drawing.Size(83, 19);
+            this.textBoxCodigoLoja.TabIndex = 27;
+            this.textBoxCodigoLoja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(395, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 20);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Codigo Loja";
+            // 
+            // textBoxModelo
+            // 
+            this.textBoxModelo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxModelo.Location = new System.Drawing.Point(283, 45);
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(83, 19);
+            this.textBoxModelo.TabIndex = 25;
+            this.textBoxModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(291, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Modelo";
+            // 
             // shapeContainer2
             // 
             this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape14,
+            this.lineShape12,
             this.lineShape2,
             this.lineShape4,
             this.lineShape3});
@@ -598,12 +834,32 @@
             this.shapeContainer2.TabIndex = 19;
             this.shapeContainer2.TabStop = false;
             // 
+            // lineShape14
+            // 
+            this.lineShape14.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape14.Enabled = false;
+            this.lineShape14.Name = "lineShape14";
+            this.lineShape14.X1 = 482;
+            this.lineShape14.X2 = 396;
+            this.lineShape14.Y1 = 74;
+            this.lineShape14.Y2 = 74;
+            // 
+            // lineShape12
+            // 
+            this.lineShape12.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape12.Enabled = false;
+            this.lineShape12.Name = "lineShape12";
+            this.lineShape12.X1 = 363;
+            this.lineShape12.X2 = 277;
+            this.lineShape12.Y1 = 71;
+            this.lineShape12.Y2 = 71;
+            // 
             // TelaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(994, 461);
+            this.ClientSize = new System.Drawing.Size(994, 495);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
@@ -612,17 +868,20 @@
             this.Name = "TelaProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaProdutos";
-            this.Load += new System.EventHandler(this.TelaProdutos_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSalvar)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNovoProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClean)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -632,7 +891,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxIdProduto;
+        private System.Windows.Forms.TextBox textBoxReferencia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxDescProduto;
         private System.Windows.Forms.Label label4;
@@ -658,11 +917,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label labelProdAtual;
-        private System.Windows.Forms.Button buttonLimpar;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxSalvar;
         private System.Windows.Forms.Panel panel1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxEstoque;
         private System.Windows.Forms.Label label3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
@@ -674,7 +932,28 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button_Edit;
+        private System.Windows.Forms.PictureBox pictureBoxPesquisa;
+        private System.Windows.Forms.TextBox textBox_Marca;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxPreço;
+        private System.Windows.Forms.Label label5;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape10;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape9;
+        private System.Windows.Forms.PictureBox pictureBoxClean;
+        private System.Windows.Forms.PictureBox pictureBoxEditar;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxNovoProduto;
+        private System.Windows.Forms.TextBox textBoxPrecoPromotion;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxCodBarras;
+        private System.Windows.Forms.Label label9;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape13;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape11;
+        private System.Windows.Forms.TextBox textBoxModelo;
+        private System.Windows.Forms.Label label7;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape12;
+        private System.Windows.Forms.TextBox textBoxCodigoLoja;
+        private System.Windows.Forms.Label label11;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape14;
     }
 }

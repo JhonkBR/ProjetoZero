@@ -55,23 +55,32 @@ namespace teste.Telas.Produtos
         {
             PesquisaProdutos RetornaProd = new PesquisaProdutos();
             ProdutosBD TodosProdutos = new ProdutosBD();
-            List<ProdutosBD> ListTest = new List<ProdutosBD>();
-            ListTest = RetornaProd.ConsultProd();
+            List<ProdutosBD> ListProdutos = new List<ProdutosBD>();
+            ListProdutos = RetornaProd.ConsultProd();
             //corrigindo informação de produto na ferramenta
             int qtdeProd;
             qtdeProd = RetornaProd.ConsultProd().Count();
             labelQtdProdutos.Text = (qtdeProd - 1).ToString();
-            ListTest = RetornaProd.ConsultProd();
-            if (index < ListTest.Count - 1)
+            ListProdutos = RetornaProd.ConsultProd();
+            if (index < ListProdutos.Count - 1)
             {
                 index += 1;
-                textBoxIdProduto.Text = ListTest[index].Idproduto;
-                textBoxIdItem.Text = ListTest[index].ItemProduto;
-                textBoxDescProduto.Text = ListTest[index].DescricaoProduto;
-                textBoxDescDetalhada.Text = ListTest[index].DescricaoDetalhada;
-                comboBoxCategorias.Text = ListTest[index].CodCategoria;
+                textBoxReferencia.Text = ListProdutos[index].Referencia;
+                textBoxIdItem.Text = ListProdutos[index].IdItem;
+                textBoxDescProduto.Text = ListProdutos[index].DescricaoProduto;
+                textBoxDescDetalhada.Text = ListProdutos[index].DescricaoDetalhada;
+                textBoxAltura.Text = Convert.ToString(ListProdutos[index].Altura);
+                textBoxLargura.Text = Convert.ToString(ListProdutos[index].Largura);
+                textBoxComprimento.Text = Convert.ToString(ListProdutos[index].Comprimento);
+                textBoxModelo.Text = ListProdutos[index].Modelo;
+                textBoxPeso.Text = Convert.ToString( ListProdutos[index].Peso);
+                textBoxPrecoPromotion.Text = Convert.ToString(ListProdutos[index].PrecoPromocional);
+                textBox_Marca.Text = ListProdutos[index].Marca;
+                comboBoxCategorias.Text = Convert.ToString(ListProdutos[index].CodLoja);
                 labelProdAtual.Text = Convert.ToString(index);
-
+                comboBoxCategorias.Text = Convert.ToString(ListProdutos[index].CodCategoria);
+                textBoxCodBarras.Text = ListProdutos[index].CodigoBarras;
+                textBoxEstoque.Text = Convert.ToString(ListProdutos[index].Estoque);
 
             }
         }
@@ -80,45 +89,31 @@ namespace teste.Telas.Produtos
         {
             labelQtdProdutos.Text = "0";
             labelProdAtual.Text = "0";
-            textBoxIdProduto.Text = "";
-            textBoxIdItem.Text =  "";
-            textBoxDescProduto.Text =  "";
+            textBoxReferencia.Text = "";
+            textBoxIdItem.Text = "";
+            textBoxDescProduto.Text = "";
             textBoxDescDetalhada.Text = "";
+            textBoxAltura.Text = "";
+            textBoxLargura.Text = "";
+            textBoxComprimento.Text = "";
+            textBoxModelo.Text = "";
+            textBoxPeso.Text = "";
+            textBoxPrecoPromotion.Text = "";
+            textBox_Marca.Text = "";
             comboBoxCategorias.Text = "";
+            labelProdAtual.Text = "";
+            comboBoxCategorias.Text = "";
+            textBoxCodBarras.Text = "";
+            textBoxEstoque.Text = "";
             index = 0;
 
         }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxLargura_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TelaProdutos_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void comboBoxCategorias_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
-            if (textBoxIdProduto.Text == "")
+            if (textBoxReferencia.Text == "")
             {
                 int qtdeProd;
                 PesquisaProdutos RetornaProd = new PesquisaProdutos();
@@ -129,11 +124,23 @@ namespace teste.Telas.Produtos
                     labelProdAtual.Text = "1";
                     index = 1;
 
-                    textBoxIdProduto.Text = produtos.Idproduto;
-                    textBoxIdItem.Text = produtos.ItemProduto;
+                    textBoxReferencia.Text = produtos.Referencia;
+                    textBoxIdItem.Text = produtos.IdItem;
                     textBoxDescProduto.Text = produtos.DescricaoProduto;
                     textBoxDescDetalhada.Text = produtos.DescricaoDetalhada;
-                    comboBoxCategorias.Text = produtos.CodCategoria;
+                    textBoxAltura.Text = Convert.ToString(produtos.Altura);
+                    textBoxLargura.Text = Convert.ToString(produtos.Largura);
+                    textBoxComprimento.Text = Convert.ToString(produtos.Comprimento);
+                    textBoxModelo.Text = produtos.Modelo;
+                    textBoxPeso.Text = Convert.ToString(produtos.Peso);
+                    textBoxPrecoPromotion.Text = Convert.ToString(produtos.PrecoPromocional);
+                    textBox_Marca.Text = produtos.Marca;
+                    comboBoxCategorias.Text = Convert.ToString(produtos.CodLoja);
+                    labelProdAtual.Text = Convert.ToString(index);
+                    comboBoxCategorias.Text = Convert.ToString(produtos.CodCategoria);
+                    textBoxCodBarras.Text = produtos.CodigoBarras;
+                    textBoxEstoque.Text = Convert.ToString(produtos.Estoque);
+                    textBoxCodigoLoja.Text = Convert.ToString(produtos.CodLoja);
                 }
             }
 
@@ -141,25 +148,38 @@ namespace teste.Telas.Produtos
             {
 
                 PesquisaProdutos RetornaProd1 = new PesquisaProdutos();
-                labelQtdProdutos.Text = RetornaProd1.ConsultaProduto(textBoxIdProduto.Text).Count.ToString();
-                foreach (ProdutosBD produtos in RetornaProd1.ConsultaProduto(textBoxIdProduto.Text))
+                labelQtdProdutos.Text = RetornaProd1.ConsultaProduto(textBoxReferencia.Text).Count.ToString();
+                foreach (ProdutosBD produtos in RetornaProd1.ConsultaProduto(textBoxReferencia.Text))
                 {
-                    textBoxIdProduto.Text = produtos.Idproduto;
-                    textBoxIdItem.Text = produtos.ItemProduto;
+                    textBoxReferencia.Text = produtos.Referencia;
+                    textBoxIdItem.Text = produtos.IdItem;
                     textBoxDescProduto.Text = produtos.DescricaoProduto;
                     textBoxDescDetalhada.Text = produtos.DescricaoDetalhada;
-                    comboBoxCategorias.Text = produtos.CodCategoria;
+                    textBoxAltura.Text = Convert.ToString(produtos.Altura);
+                    textBoxLargura.Text = Convert.ToString(produtos.Largura);
+                    textBoxComprimento.Text = Convert.ToString(produtos.Comprimento);
+                    textBoxModelo.Text = produtos.Modelo;
+                    textBoxPeso.Text = Convert.ToString(produtos.Peso);
+                    textBoxPrecoPromotion.Text = Convert.ToString(produtos.PrecoPromocional);
+                    textBox_Marca.Text = produtos.Marca;
+                    comboBoxCategorias.Text = Convert.ToString(produtos.CodLoja);
+                    labelProdAtual.Text = Convert.ToString(index);
+                    comboBoxCategorias.Text = Convert.ToString(produtos.CodCategoria);
+                    textBoxCodBarras.Text = produtos.CodigoBarras;
+                    textBoxEstoque.Text = Convert.ToString(produtos.Estoque);
+                    textBoxCodigoLoja.Text = Convert.ToString(produtos.CodLoja);
                 }
             }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            AtualizaProduto AtualizadaProd = new AtualizaProduto();
+            ManuseiaProduto AtualizadaProd = new ManuseiaProduto();
             //SqlException exception;
             try 
             {
-                AtualizadaProd.AtualizarProd(textBoxIdProduto.Text, textBoxIdItem.Text, textBoxDescDetalhada.Text, textBoxDescProduto.Text, comboBoxCategorias.Text);
+                AtualizadaProd.AtualizarProd(textBoxReferencia.Text, textBoxDescProduto.Text, textBoxDescDetalhada.Text,textBoxCodigoLoja.Text,comboBoxCategorias.Text,textBoxPeso.Text,
+                    textBoxAltura.Text,textBoxLargura.Text,textBoxComprimento.Text,textBoxEstoque.Text,textBoxPreço.Text,textBoxPrecoPromotion.Text,textBoxModelo.Text,textBox_Marca.Text,textBoxCodBarras.Text) ;
                 MessageBox.Show("Produto Atualizado");
             }
 
@@ -169,20 +189,39 @@ namespace teste.Telas.Produtos
             }
         }
 
-        private void pictureBox2_DoubleClick(object sender, EventArgs e)
-        {
-            AtualizaProduto AtualizadaProd = new AtualizaProduto();
-            //SqlException exception;
-            try
-            {
-                AtualizadaProd.AtualizarProd(textBoxIdProduto.Text, textBoxIdItem.Text, textBoxDescDetalhada.Text, textBoxDescProduto.Text, comboBoxCategorias.Text);
-                MessageBox.Show("Erro ao atualizar");
-            }
+   
 
-            catch
-            {
-                MessageBox.Show("Erro ao atualizar" + e);
-            }
+        private void button_Edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            labelQtdProdutos.Text = "0";
+            labelProdAtual.Text = "0";
+            textBoxReferencia.Text = "";
+            textBoxIdItem.Text = "";
+            textBoxDescProduto.Text = "";
+            textBoxDescDetalhada.Text = "";
+            textBoxAltura.Text = "";
+            textBoxLargura.Text = "";
+            textBoxComprimento.Text = "";
+            textBoxModelo.Text = "";
+            textBoxPeso.Text = "";
+            textBoxPrecoPromotion.Text = "";
+            textBox_Marca.Text = "";
+            comboBoxCategorias.Text = "";
+            labelProdAtual.Text = "";
+            comboBoxCategorias.Text = "";
+            textBoxCodBarras.Text = "";
+            textBoxEstoque.Text = "";
+            index = 0;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
