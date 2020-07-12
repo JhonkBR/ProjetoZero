@@ -141,6 +141,9 @@ namespace teste.Telas.Produtos
                     textBoxCodBarras.Text = produtos.CodigoBarras;
                     textBoxEstoque.Text = Convert.ToString(produtos.Estoque);
                     textBoxCodigoLoja.Text = Convert.ToString(produtos.CodLoja);
+
+                    textBoxDescDetalhada.BackColor = Color.White;
+                    textBoxDescDetalhada.Enabled = true;
                 }
             }
 
@@ -185,7 +188,7 @@ namespace teste.Telas.Produtos
 
             catch
             {
-                MessageBox.Show("Erro ao atualizar"+e);
+                MessageBox.Show("Erro ao atualizar." + e);
             }
         }
 
@@ -216,6 +219,10 @@ namespace teste.Telas.Produtos
             comboBoxCategorias.Text = "";
             textBoxCodBarras.Text = "";
             textBoxEstoque.Text = "";
+            textBoxPreço.Text = "";
+            textBoxCodigoLoja.Text = "";
+            textBoxDescDetalhada.Enabled = false;
+            textBoxDescDetalhada.BackColor = Color.Gainsboro;
             index = 0;
         }
 

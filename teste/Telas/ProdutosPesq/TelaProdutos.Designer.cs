@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaProdutos));
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxReferencia = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxDescProduto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxDescDetalhada = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxPrecoPromotion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -76,24 +70,30 @@
             this.labelQtdProdutos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxSalvar = new System.Windows.Forms.PictureBox();
-            this.textBoxIdItem = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxNovoProduto = new System.Windows.Forms.PictureBox();
             this.pictureBoxEditar = new System.Windows.Forms.PictureBox();
             this.pictureBoxClean = new System.Windows.Forms.PictureBox();
             this.pictureBoxPesquisa = new System.Windows.Forms.PictureBox();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxCodigoLoja = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape14 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape12 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape14 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.textBoxIdItem = new System.Windows.Forms.TextBox();
+            this.textBoxReferencia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxDescDetalhada = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxDescProduto = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxModelo = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxCodigoLoja = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -108,71 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(7, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Referencia:";
-            // 
-            // textBoxReferencia
-            // 
-            this.textBoxReferencia.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxReferencia.Location = new System.Drawing.Point(15, 45);
-            this.textBoxReferencia.Name = "textBoxReferencia";
-            this.textBoxReferencia.Size = new System.Drawing.Size(83, 19);
-            this.textBoxReferencia.TabIndex = 1;
-            this.textBoxReferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(11, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Descrição:";
-            // 
-            // textBoxDescProduto
-            // 
-            this.textBoxDescProduto.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxDescProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDescProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxDescProduto.ForeColor = System.Drawing.Color.Black;
-            this.textBoxDescProduto.Location = new System.Drawing.Point(17, 120);
-            this.textBoxDescProduto.Name = "textBoxDescProduto";
-            this.textBoxDescProduto.Size = new System.Drawing.Size(426, 19);
-            this.textBoxDescProduto.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(17, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Descrição detalhada:";
-            // 
-            // textBoxDescDetalhada
-            // 
-            this.textBoxDescDetalhada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxDescDetalhada.Location = new System.Drawing.Point(15, 213);
-            this.textBoxDescDetalhada.Multiline = true;
-            this.textBoxDescDetalhada.Name = "textBoxDescDetalhada";
-            this.textBoxDescDetalhada.Size = new System.Drawing.Size(432, 189);
-            this.textBoxDescDetalhada.TabIndex = 7;
             // 
             // panel2
             // 
@@ -643,28 +578,6 @@
             this.pictureBoxSalvar.TabStop = false;
             this.pictureBoxSalvar.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // textBoxIdItem
-            // 
-            this.textBoxIdItem.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxIdItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxIdItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxIdItem.Location = new System.Drawing.Point(136, 48);
-            this.textBoxIdItem.Name = "textBoxIdItem";
-            this.textBoxIdItem.Size = new System.Drawing.Size(83, 19);
-            this.textBoxIdItem.TabIndex = 17;
-            this.textBoxIdItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(156, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(30, 20);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "ID:";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
@@ -724,16 +637,6 @@
             this.pictureBoxPesquisa.TabStop = false;
             this.pictureBoxPesquisa.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // lineShape2
-            // 
-            this.lineShape2.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape2.Enabled = false;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 442;
-            this.lineShape2.X2 = 17;
-            this.lineShape2.Y1 = 142;
-            this.lineShape2.Y2 = 142;
-            // 
             // lineShape3
             // 
             this.lineShape3.BorderColor = System.Drawing.Color.DimGray;
@@ -753,6 +656,183 @@
             this.lineShape4.X2 = 132;
             this.lineShape4.Y1 = 67;
             this.lineShape4.Y2 = 67;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape2.Enabled = false;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 442;
+            this.lineShape2.X2 = 17;
+            this.lineShape2.Y1 = 142;
+            this.lineShape2.Y2 = 142;
+            // 
+            // lineShape12
+            // 
+            this.lineShape12.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape12.Enabled = false;
+            this.lineShape12.Name = "lineShape12";
+            this.lineShape12.X1 = 363;
+            this.lineShape12.X2 = 277;
+            this.lineShape12.Y1 = 71;
+            this.lineShape12.Y2 = 71;
+            // 
+            // lineShape14
+            // 
+            this.lineShape14.BorderColor = System.Drawing.Color.DimGray;
+            this.lineShape14.Enabled = false;
+            this.lineShape14.Name = "lineShape14";
+            this.lineShape14.X1 = 482;
+            this.lineShape14.X2 = 396;
+            this.lineShape14.Y1 = 74;
+            this.lineShape14.Y2 = 74;
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape14,
+            this.lineShape12,
+            this.lineShape2,
+            this.lineShape4,
+            this.lineShape3});
+            this.shapeContainer2.Size = new System.Drawing.Size(520, 426);
+            this.shapeContainer2.TabIndex = 19;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // textBoxIdItem
+            // 
+            this.textBoxIdItem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxIdItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxIdItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxIdItem.Location = new System.Drawing.Point(136, 48);
+            this.textBoxIdItem.Name = "textBoxIdItem";
+            this.textBoxIdItem.Size = new System.Drawing.Size(83, 19);
+            this.textBoxIdItem.TabIndex = 17;
+            this.textBoxIdItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxReferencia
+            // 
+            this.textBoxReferencia.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxReferencia.Location = new System.Drawing.Point(15, 45);
+            this.textBoxReferencia.Name = "textBoxReferencia";
+            this.textBoxReferencia.Size = new System.Drawing.Size(83, 19);
+            this.textBoxReferencia.TabIndex = 1;
+            this.textBoxReferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(7, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Referencia:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(156, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(30, 20);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "ID:";
+            // 
+            // textBoxDescDetalhada
+            // 
+            this.textBoxDescDetalhada.BackColor = System.Drawing.Color.White;
+            this.textBoxDescDetalhada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxDescDetalhada.Location = new System.Drawing.Point(15, 213);
+            this.textBoxDescDetalhada.Multiline = true;
+            this.textBoxDescDetalhada.Name = "textBoxDescDetalhada";
+            this.textBoxDescDetalhada.Size = new System.Drawing.Size(432, 189);
+            this.textBoxDescDetalhada.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(17, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Descrição detalhada:";
+            // 
+            // textBoxDescProduto
+            // 
+            this.textBoxDescProduto.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxDescProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDescProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxDescProduto.ForeColor = System.Drawing.Color.Black;
+            this.textBoxDescProduto.Location = new System.Drawing.Point(17, 120);
+            this.textBoxDescProduto.Name = "textBoxDescProduto";
+            this.textBoxDescProduto.Size = new System.Drawing.Size(426, 19);
+            this.textBoxDescProduto.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(11, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Descrição:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(291, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Modelo";
+            // 
+            // textBoxModelo
+            // 
+            this.textBoxModelo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxModelo.Location = new System.Drawing.Point(283, 45);
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(83, 19);
+            this.textBoxModelo.TabIndex = 25;
+            this.textBoxModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(395, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 20);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Codigo Loja";
+            // 
+            // textBoxCodigoLoja
+            // 
+            this.textBoxCodigoLoja.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxCodigoLoja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCodigoLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxCodigoLoja.Location = new System.Drawing.Point(399, 53);
+            this.textBoxCodigoLoja.Name = "textBoxCodigoLoja";
+            this.textBoxCodigoLoja.Size = new System.Drawing.Size(83, 19);
+            this.textBoxCodigoLoja.TabIndex = 27;
+            this.textBoxCodigoLoja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel3
             // 
@@ -774,85 +854,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(522, 428);
             this.panel3.TabIndex = 21;
-            // 
-            // textBoxCodigoLoja
-            // 
-            this.textBoxCodigoLoja.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxCodigoLoja.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCodigoLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxCodigoLoja.Location = new System.Drawing.Point(399, 53);
-            this.textBoxCodigoLoja.Name = "textBoxCodigoLoja";
-            this.textBoxCodigoLoja.Size = new System.Drawing.Size(83, 19);
-            this.textBoxCodigoLoja.TabIndex = 27;
-            this.textBoxCodigoLoja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(395, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 20);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Codigo Loja";
-            // 
-            // textBoxModelo
-            // 
-            this.textBoxModelo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxModelo.Location = new System.Drawing.Point(283, 45);
-            this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(83, 19);
-            this.textBoxModelo.TabIndex = 25;
-            this.textBoxModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(291, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 20);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Modelo";
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape14,
-            this.lineShape12,
-            this.lineShape2,
-            this.lineShape4,
-            this.lineShape3});
-            this.shapeContainer2.Size = new System.Drawing.Size(520, 426);
-            this.shapeContainer2.TabIndex = 19;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // lineShape14
-            // 
-            this.lineShape14.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape14.Enabled = false;
-            this.lineShape14.Name = "lineShape14";
-            this.lineShape14.X1 = 482;
-            this.lineShape14.X2 = 396;
-            this.lineShape14.Y1 = 74;
-            this.lineShape14.Y2 = 74;
-            // 
-            // lineShape12
-            // 
-            this.lineShape12.BorderColor = System.Drawing.Color.DimGray;
-            this.lineShape12.Enabled = false;
-            this.lineShape12.Name = "lineShape12";
-            this.lineShape12.X1 = 363;
-            this.lineShape12.X2 = 277;
-            this.lineShape12.Y1 = 71;
-            this.lineShape12.Y2 = 71;
             // 
             // TelaProdutos
             // 
@@ -889,13 +890,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxReferencia;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxDescProduto;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxDescDetalhada;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBoxCategorias;
         private System.Windows.Forms.Label label8;
@@ -911,21 +905,14 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBoxIdItem;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label labelQtdProdutos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label labelProdAtual;
         private System.Windows.Forms.PictureBox pictureBoxSalvar;
         private System.Windows.Forms.Panel panel1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.TextBox textBoxEstoque;
         private System.Windows.Forms.Label label3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
-        private System.Windows.Forms.Panel panel3;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape8;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
@@ -949,11 +936,24 @@
         private System.Windows.Forms.Label label9;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape13;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape11;
-        private System.Windows.Forms.TextBox textBoxModelo;
-        private System.Windows.Forms.Label label7;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape12;
-        private System.Windows.Forms.TextBox textBoxCodigoLoja;
-        private System.Windows.Forms.Label label11;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape14;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private System.Windows.Forms.TextBox textBoxIdItem;
+        private System.Windows.Forms.TextBox textBoxReferencia;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxDescDetalhada;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxDescProduto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxModelo;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxCodigoLoja;
+        private System.Windows.Forms.Panel panel3;
     }
 }
