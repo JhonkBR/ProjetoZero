@@ -94,6 +94,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxCodigoLoja = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBoxCancelar = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -107,10 +108,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClean)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancelar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.textBoxPrecoPromotion);
             this.panel2.Controls.Add(this.label10);
@@ -141,8 +144,9 @@
             // 
             // textBoxPrecoPromotion
             // 
-            this.textBoxPrecoPromotion.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxPrecoPromotion.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxPrecoPromotion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPrecoPromotion.Enabled = false;
             this.textBoxPrecoPromotion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxPrecoPromotion.Location = new System.Drawing.Point(215, 377);
             this.textBoxPrecoPromotion.Name = "textBoxPrecoPromotion";
@@ -164,8 +168,9 @@
             // 
             // textBoxCodBarras
             // 
-            this.textBoxCodBarras.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxCodBarras.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxCodBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCodBarras.Enabled = false;
             this.textBoxCodBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxCodBarras.Location = new System.Drawing.Point(16, 377);
             this.textBoxCodBarras.Name = "textBoxCodBarras";
@@ -186,10 +191,11 @@
             // 
             // textBox_Marca
             // 
-            this.textBox_Marca.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox_Marca.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox_Marca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Marca.Enabled = false;
             this.textBox_Marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox_Marca.Location = new System.Drawing.Point(89, 65);
+            this.textBox_Marca.Location = new System.Drawing.Point(100, 65);
             this.textBox_Marca.Name = "textBox_Marca";
             this.textBox_Marca.Size = new System.Drawing.Size(83, 19);
             this.textBox_Marca.TabIndex = 24;
@@ -208,8 +214,9 @@
             // 
             // textBoxPreço
             // 
-            this.textBoxPreço.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxPreço.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxPreço.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPreço.Enabled = false;
             this.textBoxPreço.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxPreço.Location = new System.Drawing.Point(172, 294);
             this.textBoxPreço.Name = "textBoxPreço";
@@ -231,8 +238,9 @@
             // 
             // textBoxEstoque
             // 
-            this.textBoxEstoque.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxEstoque.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEstoque.Enabled = false;
             this.textBoxEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxEstoque.Location = new System.Drawing.Point(30, 294);
             this.textBoxEstoque.Name = "textBoxEstoque";
@@ -243,7 +251,8 @@
             // 
             // comboBoxCategorias
             // 
-            this.comboBoxCategorias.BackColor = System.Drawing.Color.White;
+            this.comboBoxCategorias.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBoxCategorias.Enabled = false;
             this.comboBoxCategorias.FormattingEnabled = true;
             this.comboBoxCategorias.Location = new System.Drawing.Point(100, 22);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
@@ -274,8 +283,9 @@
             // 
             // textBoxAltura
             // 
-            this.textBoxAltura.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxAltura.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxAltura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAltura.Enabled = false;
             this.textBoxAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxAltura.Location = new System.Drawing.Point(182, 165);
             this.textBoxAltura.Name = "textBoxAltura";
@@ -286,8 +296,9 @@
             // 
             // textBoxLargura
             // 
-            this.textBoxLargura.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxLargura.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxLargura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLargura.Enabled = false;
             this.textBoxLargura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxLargura.Location = new System.Drawing.Point(28, 225);
             this.textBoxLargura.Name = "textBoxLargura";
@@ -309,8 +320,9 @@
             // 
             // textBoxComprimento
             // 
-            this.textBoxComprimento.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxComprimento.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxComprimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxComprimento.Enabled = false;
             this.textBoxComprimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxComprimento.Location = new System.Drawing.Point(182, 227);
             this.textBoxComprimento.Name = "textBoxComprimento";
@@ -332,8 +344,9 @@
             // 
             // textBoxPeso
             // 
-            this.textBoxPeso.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxPeso.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPeso.Enabled = false;
             this.textBoxPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxPeso.Location = new System.Drawing.Point(30, 165);
             this.textBoxPeso.Name = "textBoxPeso";
@@ -569,6 +582,8 @@
             // 
             // pictureBoxSalvar
             // 
+            this.pictureBoxSalvar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxSalvar.Enabled = false;
             this.pictureBoxSalvar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSalvar.Image")));
             this.pictureBoxSalvar.Location = new System.Drawing.Point(25, 326);
             this.pictureBoxSalvar.Name = "pictureBoxSalvar";
@@ -582,6 +597,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBoxCancelar);
             this.panel1.Controls.Add(this.pictureBoxNovoProduto);
             this.panel1.Controls.Add(this.pictureBoxEditar);
             this.panel1.Controls.Add(this.pictureBoxClean);
@@ -596,6 +612,7 @@
             // 
             // pictureBoxNovoProduto
             // 
+            this.pictureBoxNovoProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxNovoProduto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNovoProduto.Image")));
             this.pictureBoxNovoProduto.Location = new System.Drawing.Point(25, 257);
             this.pictureBoxNovoProduto.Name = "pictureBoxNovoProduto";
@@ -607,16 +624,19 @@
             // 
             // pictureBoxEditar
             // 
+            this.pictureBoxEditar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxEditar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEditar.Image")));
-            this.pictureBoxEditar.Location = new System.Drawing.Point(25, 186);
+            this.pictureBoxEditar.Location = new System.Drawing.Point(25, 175);
             this.pictureBoxEditar.Name = "pictureBoxEditar";
             this.pictureBoxEditar.Size = new System.Drawing.Size(52, 50);
             this.pictureBoxEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEditar.TabIndex = 27;
             this.pictureBoxEditar.TabStop = false;
+            this.pictureBoxEditar.Click += new System.EventHandler(this.pictureBoxEditar_Click);
             // 
             // pictureBoxClean
             // 
+            this.pictureBoxClean.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxClean.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClean.Image")));
             this.pictureBoxClean.Location = new System.Drawing.Point(25, 119);
             this.pictureBoxClean.Name = "pictureBoxClean";
@@ -628,6 +648,7 @@
             // 
             // pictureBoxPesquisa
             // 
+            this.pictureBoxPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPesquisa.Image")));
             this.pictureBoxPesquisa.Location = new System.Drawing.Point(25, 54);
             this.pictureBoxPesquisa.Name = "pictureBoxPesquisa";
@@ -704,8 +725,9 @@
             // 
             // textBoxIdItem
             // 
-            this.textBoxIdItem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxIdItem.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxIdItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxIdItem.Enabled = false;
             this.textBoxIdItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxIdItem.Location = new System.Drawing.Point(136, 48);
             this.textBoxIdItem.Name = "textBoxIdItem";
@@ -749,7 +771,8 @@
             // 
             // textBoxDescDetalhada
             // 
-            this.textBoxDescDetalhada.BackColor = System.Drawing.Color.White;
+            this.textBoxDescDetalhada.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxDescDetalhada.Enabled = false;
             this.textBoxDescDetalhada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxDescDetalhada.Location = new System.Drawing.Point(15, 213);
             this.textBoxDescDetalhada.Multiline = true;
@@ -803,8 +826,9 @@
             // 
             // textBoxModelo
             // 
-            this.textBoxModelo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxModelo.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxModelo.Enabled = false;
             this.textBoxModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxModelo.Location = new System.Drawing.Point(283, 45);
             this.textBoxModelo.Name = "textBoxModelo";
@@ -825,8 +849,9 @@
             // 
             // textBoxCodigoLoja
             // 
-            this.textBoxCodigoLoja.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxCodigoLoja.BackColor = System.Drawing.Color.Gainsboro;
             this.textBoxCodigoLoja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCodigoLoja.Enabled = false;
             this.textBoxCodigoLoja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBoxCodigoLoja.Location = new System.Drawing.Point(399, 53);
             this.textBoxCodigoLoja.Name = "textBoxCodigoLoja";
@@ -836,6 +861,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBoxCodigoLoja);
             this.panel3.Controls.Add(this.label11);
@@ -855,11 +881,23 @@
             this.panel3.Size = new System.Drawing.Size(522, 428);
             this.panel3.TabIndex = 21;
             // 
+            // pictureBoxCancelar
+            // 
+            this.pictureBoxCancelar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxCancelar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCancelar.Image")));
+            this.pictureBoxCancelar.Location = new System.Drawing.Point(25, 390);
+            this.pictureBoxCancelar.Name = "pictureBoxCancelar";
+            this.pictureBoxCancelar.Size = new System.Drawing.Size(52, 50);
+            this.pictureBoxCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCancelar.TabIndex = 29;
+            this.pictureBoxCancelar.TabStop = false;
+            this.pictureBoxCancelar.Click += new System.EventHandler(this.pictureBoxCancelar_Click);
+            // 
             // TelaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(994, 495);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -885,6 +923,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancelar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -955,5 +994,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxCodigoLoja;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBoxCancelar;
     }
 }
