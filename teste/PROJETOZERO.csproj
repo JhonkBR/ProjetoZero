@@ -125,12 +125,6 @@
     <Compile Include="Placas\TelaConsultaPlaca.Designer.cs">
       <DependentUpon>TelaConsultaPlaca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Placas\TelaInfoCarros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Placas\TelaInfoCarros.Designer.cs">
-      <DependentUpon>TelaInfoCarros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Produtos\ManuseiaProduto.cs" />
     <Compile Include="Produtos\PesquisaProdutos.cs" />
     <Compile Include="Produtos\ProdutosBD.cs" />
@@ -192,9 +186,6 @@
     </Compile>
     <EmbeddedResource Include="Placas\TelaConsultaPlaca.resx">
       <DependentUpon>TelaConsultaPlaca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Placas\TelaInfoCarros.resx">
-      <DependentUpon>TelaInfoCarros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\ProdutosPesq\TelaProdutos.resx">
       <DependentUpon>TelaProdutos.cs</DependentUpon>

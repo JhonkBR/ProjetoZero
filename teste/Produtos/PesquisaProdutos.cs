@@ -16,8 +16,8 @@ namespace teste.ProdutosClass
             List<ProdutosBD> ProductList = new List<ProdutosBD>();
             ConexaoBanco con = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "USE ProMAil "+
-            "SELECT Referencia"+
+            cmd.CommandText = @"USE ProMAil 
+            SELECT Referencia"+
                  ",IdItem"+
                  ",DescricaoProduto"+
                  ",DescricaoDetalhada"+
