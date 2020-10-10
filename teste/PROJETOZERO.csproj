@@ -107,99 +107,99 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Busca_Correios\BuscaApiCorreios.cs" />
-    <Compile Include="Controle\ForcaDaSenha.cs" />
-    <Compile Include="Controle\GeraPin.cs" />
-    <Compile Include="Controle\Email.cs" />
-    <Compile Include="Controle\ValidaNome.cs" />
-    <Compile Include="Controle\ValidaSegurancaSenha.cs" />
+    <Compile Include="SearchCorreios\BuscaApiCorreios.cs" />
+    <Compile Include="Control\ForcaDaSenha.cs" />
+    <Compile Include="Control\GeraPin.cs" />
+    <Compile Include="Control\Email.cs" />
+    <Compile Include="Control\ValidaNome.cs" />
+    <Compile Include="Control\ValidaSegurancaSenha.cs" />
     <Compile Include="DAO\ConexaoBanco.cs" />
     <Compile Include="DAO\ManipulaBanco_Login.cs" />
     <Compile Include="DAO\RetornaBanco.cs" />
     <Compile Include="DAO\SalvarCredenciaisServi.cs" />
-    <Compile Include="Placas\ConsultaPlacas.cs" />
-    <Compile Include="Placas\Placas.cs" />
-    <Compile Include="Placas\TelaConsultaPlaca.cs">
+    <Compile Include="Plates\ConsultaPlacas.cs" />
+    <Compile Include="Plates\Placas.cs" />
+    <Compile Include="Plates\TelaConsultaPlaca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Placas\TelaConsultaPlaca.Designer.cs">
+    <Compile Include="Plates\TelaConsultaPlaca.Designer.cs">
       <DependentUpon>TelaConsultaPlaca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Produtos\ManuseiaProduto.cs" />
-    <Compile Include="Produtos\PesquisaProdutos.cs" />
-    <Compile Include="Produtos\ProdutosBD.cs" />
-    <Compile Include="Telas\ProdutosPesq\TelaProdutos.cs">
+    <Compile Include="Product\ManuseiaProduto.cs" />
+    <Compile Include="Product\PesquisaProdutos.cs" />
+    <Compile Include="Product\ProdutosBD.cs" />
+    <Compile Include="Screens\ProdutosPesq\TelaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\ProdutosPesq\TelaProdutos.Designer.cs">
+    <Compile Include="Screens\ProdutosPesq\TelaProdutos.Designer.cs">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaCadastrarUser.cs">
+    <Compile Include="Screens\TelaCadastrarUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaCadastrarUser.Designer.cs">
+    <Compile Include="Screens\TelaCadastrarUser.Designer.cs">
       <DependentUpon>TelaCadastrarUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaCadastroCliente.cs">
+    <Compile Include="Screens\TelaCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaCadastroCliente.Designer.cs">
+    <Compile Include="Screens\TelaCadastroCliente.Designer.cs">
       <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaConfigBanco.cs">
+    <Compile Include="Screens\TelaConfigBanco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaConfigBanco.Designer.cs">
+    <Compile Include="Screens\TelaConfigBanco.Designer.cs">
       <DependentUpon>TelaConfigBanco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaDeLogin.cs">
+    <Compile Include="Screens\TelaDeLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaDeLogin.Designer.cs">
+    <Compile Include="Screens\TelaDeLogin.Designer.cs">
       <DependentUpon>TelaDeLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\TelaCentral.cs">
+    <Compile Include="Screens\TelaCentral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaCentral.Designer.cs">
+    <Compile Include="Screens\TelaCentral.Designer.cs">
       <DependentUpon>TelaCentral.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaEndereco.cs">
+    <Compile Include="Screens\TelaEndereco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaEndereco.Designer.cs">
+    <Compile Include="Screens\TelaEndereco.Designer.cs">
       <DependentUpon>TelaEndereco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaMudarSenha.cs">
+    <Compile Include="Screens\TelaMudarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaMudarSenha.Designer.cs">
+    <Compile Include="Screens\TelaMudarSenha.Designer.cs">
       <DependentUpon>TelaMudarSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaRecuperarSenha.cs">
+    <Compile Include="Screens\TelaRecuperarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaRecuperarSenha.Designer.cs">
+    <Compile Include="Screens\TelaRecuperarSenha.Designer.cs">
       <DependentUpon>TelaRecuperarSenha.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Placas\TelaConsultaPlaca.resx">
+    <EmbeddedResource Include="Plates\TelaConsultaPlaca.resx">
       <DependentUpon>TelaConsultaPlaca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\ProdutosPesq\TelaProdutos.resx">
+    <EmbeddedResource Include="Screens\ProdutosPesq\TelaProdutos.resx">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaCadastrarUser.resx">
+    <EmbeddedResource Include="Screens\TelaCadastrarUser.resx">
       <DependentUpon>TelaCadastrarUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaCadastroCliente.resx">
+    <EmbeddedResource Include="Screens\TelaCadastroCliente.resx">
       <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaConfigBanco.resx">
+    <EmbeddedResource Include="Screens\TelaConfigBanco.resx">
       <DependentUpon>TelaConfigBanco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaDeLogin.resx">
+    <EmbeddedResource Include="Screens\TelaDeLogin.resx">
       <DependentUpon>TelaDeLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -212,16 +212,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Telas\TelaCentral.resx">
+    <EmbeddedResource Include="Screens\TelaCentral.resx">
       <DependentUpon>TelaCentral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaEndereco.resx">
+    <EmbeddedResource Include="Screens\TelaEndereco.resx">
       <DependentUpon>TelaEndereco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaMudarSenha.resx">
+    <EmbeddedResource Include="Screens\TelaMudarSenha.resx">
       <DependentUpon>TelaMudarSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaRecuperarSenha.resx">
+    <EmbeddedResource Include="Screens\TelaRecuperarSenha.resx">
       <DependentUpon>TelaRecuperarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -253,11 +253,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icones\Close_Icon.png" />
-    <Content Include="Icones\giphy.gif" />
-    <Content Include="Icones\gradients-26042-26727-hd-wallpapers.jpg" />
-    <Content Include="Icones\how.png" />
-    <Content Include="Icones\Minimize_Icon.png" />
+    <Content Include="Icons\Close_Icon.png" />
+    <Content Include="Icons\giphy.gif" />
+    <Content Include="Icons\gradients-26042-26727-hd-wallpapers.jpg" />
+    <Content Include="Icons\how.png" />
+    <Content Include="Icons\Minimize_Icon.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

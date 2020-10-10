@@ -10,6 +10,8 @@ namespace teste.Controle
 {
     public class ValidaSegurancaSenha
     {
+        #region Gera pontos de senha
+
         public int geraPontosSenha(string senha)
         {
             if (senha == null) return 0;
@@ -21,36 +23,48 @@ namespace teste.Controle
             int pontosPorRepeticao = GetPontoPorRepeticao(senha);
             return pontosPorTamanho + pontosPorMinusculas + pontosPorMaiusculas + pontosPorDigitos + pontosPorSimbolos - pontosPorRepeticao;
         }
+        #endregion
 
+        #region Get pontos
         private int GetPontoPorTamanho(string senha)
         {
             return Math.Min(10, senha.Length) * 6;
         }
+        #endregion
 
+        #region Get Pontos minusculas
         private int GetPontoPorMinusculas(string senha)
         {
             int rawplacar = senha.Length - Regex.Replace(senha, "[a-z]", "").Length;
             return Math.Min(2, rawplacar) * 5;
         }
+        #endregion
 
+        #region Get pontos maiusculas
         private int GetPontoPorMaiusculas(string senha)
         {
             int rawplacar = senha.Length - Regex.Replace(senha, "[A-Z]", "").Length;
             return Math.Min(2, rawplacar) * 5;
         }
+        #endregion
 
+        #region Get pontos por digitos
         private int GetPontoPorDigitos(string senha)
         {
             int rawplacar = senha.Length - Regex.Replace(senha, "[0-9]", "").Length;
             return Math.Min(2, rawplacar) * 5;
         }
+        #endregion
 
+        #region Get pontos por simbolos
         private int GetPontoPorSimbolos(string senha)
         {
             int rawplacar = Regex.Replace(senha, "[a-zA-Z0-9]", "").Length;
             return Math.Min(2, rawplacar) * 5;
         }
+        #endregion
 
+        #region Get pontos por repeticao
         private int GetPontoPorRepeticao(string senha)
         {
             System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"(\w)*.*\1");
@@ -64,6 +78,10 @@ namespace teste.Controle
                 return 0;
             }
         }
+
+        #endregion
+
+        #region Get força da senha
         public ForcaDaSenha GetForcaDaSenha(string senha)
         {
             int placar = geraPontosSenha(senha);
@@ -79,6 +97,7 @@ namespace teste.Controle
             else
                 return ForcaDaSenha.Segura;
         }
+        #endregion
     }
 }
 

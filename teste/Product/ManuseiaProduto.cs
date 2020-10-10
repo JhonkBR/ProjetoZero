@@ -12,7 +12,7 @@ namespace teste.Produtos
 {
     public class ManuseiaProduto
     {
-        String ProdAtualizado;
+        readonly String ProdAtualizado;
         string ValorReferencia;
         string  ValorIditem;
 

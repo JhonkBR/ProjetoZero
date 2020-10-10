@@ -10,12 +10,17 @@ namespace teste.ProdutosClass
 {
     public class PesquisaProdutos
     {
+        /* Consulta produtos */
+
         public  List<ProdutosBD> ConsultProd()
         {
-            // Busca todos os produtos   
+
+            #region Consulta todos os produtos
+
             List<ProdutosBD> ProductList = new List<ProdutosBD>();
             ConexaoBanco con = new ConexaoBanco();
             SqlCommand cmd = new SqlCommand();
+
             cmd.CommandText = @"USE ProMAil 
             SELECT Referencia"+
                  ",IdItem"+
@@ -58,8 +63,9 @@ namespace teste.ProdutosClass
             }
              return ProductList;
         }
+        #endregion
 
-
+        #region Consulta produto específico
         public List<ProdutosBD> ConsultaProduto(string Referencia) {
             // Pesquisa Produto específico
             List<ProdutosBD> ProductList = new List<ProdutosBD>();
@@ -108,6 +114,7 @@ namespace teste.ProdutosClass
             }
             return ProductList;
         }
+        #endregion
 
     }
 }

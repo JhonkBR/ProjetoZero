@@ -12,8 +12,9 @@ namespace teste.Controle
     public class Email
     {
 
-
+        #region Valida E-mail
         // Método de verificar se o e-mail é válido.
+
         bool retornoemail;
         public bool ValidaEmailValido(string email)
         {
@@ -31,9 +32,10 @@ namespace teste.Controle
 
             return retornoemail;
         }
-        // Fim do método
+        #endregion
 
 
+        #region Enviar E-mail
 
         // Início do método de enviar o e-mail
         public bool EnviaEmail(string email, int pin)
@@ -49,7 +51,6 @@ namespace teste.Controle
                 using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
                 {
                     mail.From = new System.Net.Mail.MailAddress("projetotestebr@gmail.com");
-
 
                     if (!string.IsNullOrWhiteSpace(email))
                     {
@@ -73,11 +74,9 @@ namespace teste.Controle
 
                     }
 
-
-
                     return retornoemail;
                 }
-
+                #endregion
             }
         }
     }
