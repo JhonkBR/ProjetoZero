@@ -7,6 +7,7 @@ using teste.DAO;
 using System.Data.SqlClient;
 using teste.ProdutosClass;
 using System.Windows.Forms;
+using teste.Product;
 
 namespace teste.Produtos
 {
@@ -15,6 +16,7 @@ namespace teste.Produtos
         readonly String ProdAtualizado;
         string ValorReferencia;
         string  ValorIditem;
+        UpdateProduct up = new UpdateProduct();
 
         public String AtualizarProd(string Referencia, string DescricaoProduto, string DescricaoDetalhada, string CodigoLoja,string CodigoCategoria, 
             string Peso,string Altura, string Largura,string Comprimento,string Estoque,string Preco,string PrecoPromocional,string Modelo,
@@ -37,24 +39,9 @@ namespace teste.Produtos
             cmd.Parameters.AddWithValue("@Modelo", Modelo);
             cmd.Parameters.AddWithValue("@Marca", Marca);
             cmd.Parameters.AddWithValue("@CodigoBarras", CodigoBarras);
-            cmd.CommandText =
-                            "USE ProMAil" +
-                            "  UPDATE dbo.Produtos SET" +
-                            "  DescricaoProduto = @DescricaoProduto" +
-                            "  ,DescricaoDetalhada = @DescricaoDetalhada" +
-                            "  ,CodigoLoja = @CodigoLoja" +
-                            "  ,CodigoCategoria = @CodigoCategoria" +
-                            "  ,Peso = @Peso" +
-                            "  ,Altura = @Altura" +
-                            "  ,Largura = @Largura" +
-                            "  ,Comprimento = @Comprimento" +
-                            "  ,Estoque = @Estoque" +
-                            "  ,Preco = @Preco" +
-                            "  ,PrecoPromocional = @PrecoPromocional" +
-                            "  ,Modelo = @Modelo" +
-                            "  ,Marca = @Marca" +
-                            "  ,CodigoBarras = @CodigoBarras" +
-                            " WHERE REFERENCIA = @Referencia";
+
+            cmd.CommandText = up.Updateproduct();
+
             cmd.Connection = con.Conectar();
             try 
             {

@@ -107,6 +107,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Product\UpdateProduct.cs" />
     <Compile Include="SearchCorreios\BuscaApiCorreios.cs" />
     <Compile Include="Control\ForcaDaSenha.cs" />
     <Compile Include="Control\GeraPin.cs" />
